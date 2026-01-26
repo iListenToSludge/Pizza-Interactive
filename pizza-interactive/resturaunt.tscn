@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwpoh0ecxixm8"]
+
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="2_0eybj"]
+
+[node name="Resturaunt" type="Node2D"]
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+modulate = Color(0, 1, 1, 1)
+offset_left = -3.0
+offset_top = 5.0
+offset_right = 149.30984
+offset_bottom = 348.85773
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.16967261, 0.6513132, 0.45415032, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ColorRect3"]
+polygon = PackedVector2Array(44.163204, 14.6901245, 0.26604337, 14.6901245, 0.26604337, 340.0492, 151.91078, 343.85773, 152.0438, 3.264472, 81.40928, 2.1763148, 80.87719, 44.614452, 113.46751, 47.334846, 113.73355, 239.9387, 92.05101, 241.02686, 91.91799, 324.2709, 57.06631, 323.72684, 56.667244, 244.83542, 39.77349, 242.6591, 38.84234, 49.51116)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 1, 1, 1)
+offset_left = 294.00003
+offset_top = 92.0
+offset_right = 368.22614
+offset_bottom = 284.60382
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.958692, 0.83814794, 0.91022235, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(0, 1, 1, 1)
+offset_left = 432.0
+offset_top = 92.0
+offset_right = 465.92053
+offset_bottom = 372.20053
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.958692, 0.83814794, 0.91022235, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_0eybj")]
+position = Vector2(551, 243)
+scale = Vector2(0.39880437, 0.40742108)
