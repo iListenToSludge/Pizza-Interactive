@@ -90,12 +90,16 @@ shape = SubResource("CapsuleShape2D_shxr0")
 position = Vector2(224, 86)
 shape = SubResource("CapsuleShape2D_x0n7s")
 
-[node name="ColorRect9" type="ColorRect" parent="."]
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(246.00003, 248.00003)
+scale = Vector2(7.517571, 1.8379694)
+
+[node name="ColorRect9" type="ColorRect" parent="StaticBody2D4"]
 modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
-offset_left = 243.00002
-offset_top = 397.0
-offset_right = 266.54486
-offset_bottom = 437.26184
+offset_left = -0.6651124
+offset_top = 71.81838
+offset_right = 2.3429985
+offset_bottom = 96.980225
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.92774105, 0.8488901, 0.93099123, 1)
 
@@ -103,12 +107,12 @@ color = Color(0.92774105, 0.8488901, 0.93099123, 1)
 position = Vector2(246.00003, 248.00003)
 scale = Vector2(7.517571, 1.8379694)
 
-[node name="ColorRect10" type="ColorRect" parent="."]
+[node name="ColorRect10" type="ColorRect" parent="StaticBody2D3"]
 modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
-offset_left = 246.00003
-offset_top = 248.00003
-offset_right = 269.54486
-offset_bottom = 288.26187
+offset_left = -1.1971993
+offset_top = 1.0881408
+offset_right = 1.7755218
+offset_bottom = 27.434057
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.92774105, 0.8488901, 0.93099123, 1)
 
@@ -159,17 +163,17 @@ offset_bottom = 159.0
 text = "GRILL"
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="."]
-offset_left = 307.0
-offset_top = 274.0
-offset_right = 427.0
-offset_bottom = 314.0
+offset_left = 301.0
+offset_top = 283.0
+offset_right = 421.0
+offset_bottom = 323.0
 text = "SEAT"
 
 [node name="RichTextLabel6" type="RichTextLabel" parent="."]
-offset_left = 312.0
-offset_top = 421.0
-offset_right = 432.0
-offset_bottom = 461.0
+offset_left = 296.0
+offset_top = 405.0
+offset_right = 345.0
+offset_bottom = 432.0
 text = "SEAT"
 
 [node name="RichTextLabel7" type="RichTextLabel" parent="."]
@@ -181,6 +185,6 @@ text = "EXIT"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0eybj")]
 position = Vector2(551, 243)
-scale = Vector2(0.39880437, 0.40742108)
+scale = Vector2(0.35880437, 0.36741865)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
