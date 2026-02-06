@@ -1,49 +1,183 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwpoh0ecxixm8"]
+[gd_scene load_steps=4 format=3 uid="uid://dwpoh0ecxixm8"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="2_0eybj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shxr0"]
+radius = 9.401882
+height = 179.60611
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x0n7s"]
+radius = 20.0
+height = 120.0
 
 [node name="Resturaunt" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(14, -8.000024)
+position = Vector2(-99, 82.99998)
 scale = Vector2(7.4884224, 1.9627199)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-1.6024737, -9.680431)
-polygon = PackedVector2Array(38.85999, 4.0759764, 39.26061, 367.34735, 16.825975, 364.29037, 16.291817, -4.585474)
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -94.94656
+offset_top = -375.49933
+offset_right = 43.246567
+offset_bottom = -19.794403
+scale = Vector2(2.5414345, 2.5651593)
+color = Color(0.958692, 0.83814794, 0.91022235, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-1.6024737, -9.680432)
-polygon = PackedVector2Array(39.26061, 61.649143, 113.375015, 61.649143, 113.375015, 241.5016, 91.608086, 240.99211, 91.608086, 323.02112, 57.421978, 324.0401, 57.421978, 242.0111, 39.26061, 242.0111, 39.527687, 368.87585, 127.66374, 369.89484, 128.06436, 39.74077, 128.1979, -3.056982, 38.59291, -1.528491)
+polygon = PackedVector2Array(37.391056, -71.83907, 47.673595, -71.83907, 47.673595, -78.46253, 68.63929, -78.46253, 68.63929, -71.83907, 72.378395, -71.83907, 72.378395, -77.44354, 96.816124, -77.44354, 96.816124, -71.83907, 133.67302, -71.83907, 133.67302, 231.31168, 163.85295, 231.31168, 163.7194, -179.85245, 36.990437, -179.34294)
+metadata/_edit_group_ = true
 
-[node name="ColorRect3" type="ColorRect" parent="StaticBody2D/CollisionPolygon2D"]
-visible = false
-modulate = Color(0, 1, 1, 1)
-offset_left = -7.211132
-offset_top = -89.67146
-offset_right = 14.789738
-offset_bottom = 254.18626
-scale = Vector2(7.517571, 1.8379694)
-color = Color(0.16967261, 0.6513132, 0.45415032, 1)
-metadata/_edit_use_anchors_ = true
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(36.589817, -181.89043, 37.391056, -71.83907, 37.391056, 231.31168, 102.1577, 231.31168, 102.02416, 240.48264, 126.99605, 240.48264, 126.99605, 230.80219, 133.53949, 230.80219, 163.45233, 231.31168, 163.05171, 325.56863, 17.093054, 329.6446, 15.35704, -186.4759)
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(0, 1, 1, 1)
-offset_left = 294.00003
-offset_top = 92.0
-offset_right = 368.22614
-offset_bottom = 284.60382
+offset_left = 181.00003
+offset_top = -58.0
+offset_right = 276.9087
+offset_bottom = 265.72678
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.958692, 0.83814794, 0.91022235, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-modulate = Color(0, 1, 1, 1)
-offset_left = 432.0
-offset_top = 92.0
-offset_right = 465.92053
-offset_bottom = 372.20053
+modulate = Color(0.49193627, 0.99797374, 0.699988, 1)
+offset_left = 666.00006
+offset_top = 502.00003
+offset_right = 690.74207
+offset_bottom = 530.8362
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.958692, 0.83814794, 0.91022235, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
+offset_left = 443.00003
+offset_top = -69.0
+offset_right = 467.343
+offset_bottom = -40.16385
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="ColorRect6" type="ColorRect" parent="StaticBody2D2"]
+modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
+offset_left = 189.00002
+offset_top = 19.000002
+offset_right = 197.24736
+offset_bottom = 103.3322
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="StaticBody2D2"]
+modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
+offset_left = 211.0
+offset_top = 101.0
+offset_right = 276.4467
+offset_bottom = 140.17368
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(450.00003, 137)
+rotation = -1.5676615
+scale = Vector2(2.6583607, 2.7282481)
+shape = SubResource("CapsuleShape2D_shxr0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(224, 86)
+shape = SubResource("CapsuleShape2D_x0n7s")
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
+offset_left = 243.00002
+offset_top = 397.0
+offset_right = 266.54486
+offset_bottom = 437.26184
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(246.00003, 248.00003)
+scale = Vector2(7.517571, 1.8379694)
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
+offset_left = 246.00003
+offset_top = 248.00003
+offset_right = 269.54486
+offset_bottom = 288.26187
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+modulate = Color(0.29584786, 0.64872503, 0.86984974, 1)
+offset_left = 258.0
+offset_top = -71.00001
+offset_right = 278.8844
+offset_bottom = -41.075676
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+modulate = Color(0.3767823, 0.7580193, 0.8284105, 1)
+offset_left = 688.0
+offset_top = -57.0
+offset_right = 708.8844
+offset_bottom = -27.075668
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 295.0
+offset_top = -57.0
+offset_right = 415.0
+offset_bottom = -17.0
+text = "FREEZER"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 510.0
+offset_top = -57.0
+offset_right = 630.0
+offset_bottom = -17.0
+text = "EXIT"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 712.0
+offset_top = -52.0
+offset_right = 832.0
+offset_bottom = -12.0
+text = "DRINK FRIDGE"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+offset_left = 394.0
+offset_top = 119.0
+offset_right = 514.0
+offset_bottom = 159.0
+text = "GRILL"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+offset_left = 307.0
+offset_top = 274.0
+offset_right = 427.0
+offset_bottom = 314.0
+text = "SEAT"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+offset_left = 312.0
+offset_top = 421.0
+offset_right = 432.0
+offset_bottom = 461.0
+text = "SEAT"
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="."]
+offset_left = 742.0
+offset_top = 517.0
+offset_right = 862.0
+offset_bottom = 557.0
+text = "EXIT"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0eybj")]
 position = Vector2(551, 243)
