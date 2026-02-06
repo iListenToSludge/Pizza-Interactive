@@ -1,0 +1,27 @@
+{
+	"0" : {
+		"texture" : "body.png",
+		"slot_type" : 2,
+		"ATK" : 3
+	},
+	"1" : {
+		"texture" : "head.png",
+		"slot_type" : 1,
+		"ATK" : 2
+	},
+	"2" : {
+		"texture" : "leg.png",
+		"slot_type" : 3,
+		"ATK" : 1
+	},
+	"3" : {
+		"texture" : "bow.png",
+		"slot_type" : 4,
+		"ATK" : 2
+	},
+	"4" : {
+		"texture" : "crossbow.png",
+		"slot_type" : 4,
+		"ATK" : 6
+	}
+}

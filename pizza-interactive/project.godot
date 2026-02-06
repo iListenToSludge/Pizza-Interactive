@@ -15,6 +15,10 @@ run/main_scene="uid://ctx1b4dq60qv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ItemData="*res://Autoload/database.gd"
+
 [input]
 
 "move up"={
