@@ -12,4 +12,9 @@ func add_item(ID = "0"):
 					 "ATK": item_ATK,
 					 "SLOT_TYPE": item_slot_type}
 	
-	get_child(0).set_property(item_data)
+	var index = 0
+	for i in get_children():
+		if i.filled == false:
+			index = i.get_index()
+			break
+	get_child(index).set_property(item_data)
