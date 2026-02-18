@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwpoh0ecxixm8"]
+[gd_scene load_steps=3 format=3 uid="uid://dwpoh0ecxixm8"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="2_0eybj"]
+[ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_x0n7s"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -50,3 +51,6 @@ position = Vector2(551, 243)
 scale = Vector2(0.39880437, 0.40742108)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_x0n7s")]
+position = Vector2(410, 265)
