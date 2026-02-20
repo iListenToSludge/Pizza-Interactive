@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwpoh0ecxixm8"]
+[gd_scene load_steps=2 format=3 uid="uid://cxgv21mtclgyw"]
 
-[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="2_0eybj"]
+[ext_resource type="PackedScene" path="res://character.tscn" id="2_0eybj"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -17,7 +17,6 @@ position = Vector2(-1.6024737, -9.680432)
 polygon = PackedVector2Array(39.26061, 61.649143, 113.375015, 61.649143, 113.375015, 241.5016, 91.608086, 240.99211, 91.608086, 323.02112, 57.421978, 324.0401, 57.421978, 242.0111, 39.26061, 242.0111, 39.527687, 368.87585, 127.66374, 369.89484, 128.06436, 39.74077, 128.1979, -3.056982, 38.59291, -1.528491)
 
 [node name="ColorRect3" type="ColorRect" parent="StaticBody2D/CollisionPolygon2D"]
-visible = false
 modulate = Color(0, 1, 1, 1)
 offset_left = -7.211132
 offset_top = -89.67146

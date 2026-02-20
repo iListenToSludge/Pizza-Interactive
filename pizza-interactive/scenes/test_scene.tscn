@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c3rd0myu7s7bs" path="res://scenes/character.gd" id="2_nd71p"]
 
 [node name="TestScene" type="Node2D"]
+position = Vector2(-1, -1)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
