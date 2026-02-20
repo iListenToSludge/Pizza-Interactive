@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvdi8qjg07775"]
+
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="1_1hywo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_07sd7"]
+radius = 26.019224
+
+[node name="KitchenHallway" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-768, -657)
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D"]
+offset_right = 2689.0
+offset_bottom = 1792.0
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1504, 657, 1504, 881, 1472, 881, 1472, 1025, 1504, 1025, 1504, 1177, 1472, 1177, 1472, 1265, 1432, 1265, 1432, 1289, 1256, 1289, 1256, 1265, 1216, 1265, 1216, 1353, 1728, 1353, 1728, 657)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1024, 657, 1024, 1297, 1216, 1297, 1216, 1289, 1216, 1041, 1184, 1041, 1184, 889, 1216, 889, 1216, 689, 1472, 689, 1472, 729, 1504, 729, 1504, 657)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 446.0
+offset_top = 35.0
+offset_right = 706.0
+offset_bottom = 609.0
+color = Color(0.20392157, 1, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 492.0
+offset_top = 576.0
+offset_right = 667.0
+offset_bottom = 629.0
+color = Color(0.969251, 0.8445504, 0.8776378, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 417.0
+offset_top = 232.0
+offset_right = 478.0
+offset_bottom = 383.0
+color = Color(0.969251, 0.8445504, 0.8776378, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 674.0
+offset_top = 71.0
+offset_right = 735.0
+offset_bottom = 222.0
+color = Color(0.969251, 0.8445504, 0.8776378, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 673.0
+offset_top = 370.0
+offset_right = 734.0
+offset_bottom = 521.0
+color = Color(0.969251, 0.8445504, 0.8776378, 1)
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2(451, 40)
+
+[node name="ColorRect7" type="ColorRect" parent="StaticBody2D7"]
+offset_right = 59.0
+offset_bottom = 61.0
+color = Color(0.37208995, 0.7260636, 0.4897309, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(30, 31)
+shape = SubResource("CircleShape2D_07sd7")
+debug_color = Color(0.96563226, 8.663535e-07, 0.48844033, 0.41960785)
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 680.0
+offset_top = 433.0
+offset_right = 743.0
+offset_bottom = 482.0
+text = "closet"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 551.0
+offset_top = 595.0
+offset_right = 648.0
+offset_bottom = 644.0
+text = "kitchen"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 424.0
+offset_top = 288.0
+offset_right = 487.0
+offset_bottom = 337.0
+text = "room"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 685.0
+offset_top = 117.0
+offset_right = 748.0
+offset_bottom = 166.0
+text = "bath
+room"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 462.0
+offset_top = 58.0
+offset_right = 525.0
+offset_bottom = 107.0
+text = "plant"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_1hywo")]
+position = Vector2(584, 560)
+scale = Vector2(0.35880437, 0.36741865)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

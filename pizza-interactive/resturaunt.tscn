@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwpoh0ecxixm8"]
+[gd_scene load_steps=12 format=3 uid="uid://dwpoh0ecxixm8"]
 
+[ext_resource type="PackedScene" uid="uid://cf7s266nqwrwq" path="res://scene_trigger.tscn" id="1_x0n7s"]
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="2_0eybj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shxr0"]
@@ -8,7 +9,32 @@ height = 179.60611
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x0n7s"]
 radius = 20.0
-height = 120.0
+height = 206.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0eybj"]
+radius = 1.1678548
+height = 16.577194
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_83gda"]
+radius = 8.779427
+height = 33.73288
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0eybj"]
+size = Vector2(24.689365, 19.870407)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83gda"]
+size = Vector2(36, 121)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfuc7"]
+size = Vector2(165, 43)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfuc7"]
+radius = 7.3161964
+height = 22.851305
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e16pn"]
+radius = 8.247345
+height = 20.67499
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -60,14 +86,23 @@ offset_bottom = -40.16385
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.92774105, 0.8488901, 0.93099123, 1)
 
+[node name="ColorRect4" type="ColorRect" parent="."]
+modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
+offset_left = 859.00006
+offset_top = 93.0
+offset_right = 866.0502
+offset_bottom = 170.80325
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="ColorRect6" type="ColorRect" parent="StaticBody2D2"]
 modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
-offset_left = 189.00002
-offset_top = 19.000002
-offset_right = 197.24736
-offset_bottom = 103.3322
+offset_left = 182.0
+offset_top = -57.000008
+offset_right = 191.1785
+offset_bottom = 68.682175
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.92774105, 0.8488901, 0.93099123, 1)
 
@@ -87,7 +122,7 @@ scale = Vector2(2.6583607, 2.7282481)
 shape = SubResource("CapsuleShape2D_shxr0")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(224, 86)
+position = Vector2(222, 57)
 shape = SubResource("CapsuleShape2D_x0n7s")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
@@ -96,12 +131,17 @@ scale = Vector2(7.517571, 1.8379694)
 
 [node name="ColorRect9" type="ColorRect" parent="StaticBody2D4"]
 modulate = Color(0.9835326, 0.78318983, 0.88708925, 1)
-offset_left = -0.6651124
-offset_top = 71.81838
-offset_right = 2.3429985
-offset_bottom = 96.980225
+offset_left = -0.66511536
+offset_top = 71.818375
+offset_right = 2.3429956
+offset_bottom = 96.98022
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.92774105, 0.8488901, 0.93099123, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(9.843601, 96.30192)
+scale = Vector2(7.5175714, 1.8379695)
+shape = SubResource("CapsuleShape2D_0eybj")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(246.00003, 248.00003)
@@ -116,21 +156,33 @@ offset_bottom = 27.434057
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.92774105, 0.8488901, 0.93099123, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(9.444536, 25.027603)
+shape = SubResource("CapsuleShape2D_83gda")
+
+[node name="ColorRect5" type="ColorRect" parent="StaticBody2D3"]
 modulate = Color(0.29584786, 0.64872503, 0.86984974, 1)
-offset_left = 258.0
-offset_top = -71.00001
-offset_right = 278.8844
-offset_bottom = -41.075676
+offset_left = 1.5962563
+offset_top = -173.56113
+offset_right = 3.9850502
+offset_bottom = -157.27994
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.92774105, 0.8488901, 0.93099123, 1)
 
-[node name="ColorRect7" type="ColorRect" parent="."]
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(258, -71.00001)
+scale = Vector2(7.517571, 1.8379694)
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(688.00006, -67)
+scale = Vector2(7.517571, 1.8379694)
+
+[node name="ColorRect7" type="ColorRect" parent="StaticBody2D6"]
 modulate = Color(0.3767823, 0.7580193, 0.8284105, 1)
-offset_left = 688.0
-offset_top = -57.0
-offset_right = 708.8844
-offset_bottom = -27.075668
+offset_left = 0.13301358
+offset_top = -2.7203937
+offset_right = 2.928786
+offset_bottom = 15.3369255
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.92774105, 0.8488901, 0.93099123, 1)
 
@@ -142,20 +194,30 @@ offset_bottom = -17.0
 text = "FREEZER"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 510.0
-offset_top = -57.0
-offset_right = 630.0
-offset_bottom = -17.0
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 488.0
+offset_top = -60.0
+offset_right = 608.0
+offset_bottom = -20.0
+text = "HALLWAY"
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 863.0
+offset_top = 147.0
+offset_right = 983.0
+offset_bottom = 187.0
 text = "EXIT"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
 offset_left = 712.0
-offset_top = -52.0
+offset_top = -51.0
 offset_right = 832.0
-offset_bottom = -12.0
+offset_bottom = -11.0
 text = "DRINK FRIDGE"
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
+self_modulate = Color(0, 0, 0, 1)
 offset_left = 394.0
 offset_top = 119.0
 offset_right = 514.0
@@ -171,9 +233,9 @@ text = "SEAT"
 
 [node name="RichTextLabel6" type="RichTextLabel" parent="."]
 offset_left = 296.0
-offset_top = 405.0
+offset_top = 410.0
 offset_right = 345.0
-offset_bottom = 432.0
+offset_bottom = 437.0
 text = "SEAT"
 
 [node name="RichTextLabel7" type="RichTextLabel" parent="."]
@@ -182,6 +244,56 @@ offset_top = 517.0
 offset_right = 862.0
 offset_bottom = 557.0
 text = "EXIT"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 38.0
+offset_top = -68.0
+offset_right = 122.0
+offset_bottom = -45.0
+text = "resturaunt"
+
+[node name="SceneTrigger" parent="." instance=ExtResource("1_x0n7s")]
+position = Vector2(751.00006, 530)
+scale = Vector2(7.4884224, 1.9627199)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
+position = Vector2(1.0092545, 3.311615)
+shape = SubResource("RectangleShape2D_0eybj")
+debug_color = Color(0.9396611, 1.00111965e-05, 0.62056696, 0.41960785)
+
+[node name="SceneTrigger3" parent="." instance=ExtResource("1_x0n7s")]
+position = Vector2(886, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger3"]
+position = Vector2(8, 6.5)
+shape = SubResource("RectangleShape2D_83gda")
+debug_color = Color(0.9223692, 5.2655043e-05, 0.689661, 0.41960785)
+
+[node name="SceneTrigger2" parent="." instance=ExtResource("1_x0n7s")]
+position = Vector2(526, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger2"]
+position = Vector2(9.5, 2.5)
+shape = SubResource("RectangleShape2D_lfuc7")
+debug_color = Color(0.9067023, 0, 0.35020438, 0.41960785)
+
+[node name="SceneTrigger4" parent="." instance=ExtResource("1_x0n7s")]
+position = Vector2(309, -51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(322, -44)
+scale = Vector2(7.517571, 1.8379694)
+shape = SubResource("CapsuleShape2D_lfuc7")
+debug_color = Color(0.760924, 0.3784795, 0.64657253, 0.41960785)
+
+[node name="SceneTrigger5" parent="." instance=ExtResource("1_x0n7s")]
+position = Vector2(760, -60)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(766, -39)
+scale = Vector2(7.517571, 1.8379694)
+shape = SubResource("CapsuleShape2D_e16pn")
+debug_color = Color(0.87991565, 0.00037041426, 0.8248162, 0.41960785)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0eybj")]
 position = Vector2(551, 243)

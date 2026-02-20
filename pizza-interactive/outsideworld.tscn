@@ -1,0 +1,174 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjoqifndirgla"]
+
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="1_ss2vc"]
+
+[node name="Outsideworld" type="Node2D"]
+
+[node name="ColorRect21" type="ColorRect" parent="."]
+offset_left = -3024.0
+offset_top = -2392.0
+offset_right = 4272.0
+offset_bottom = 2888.0
+color = Color(0.53202575, 0.791239, 0.7615892, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-3024, -2392)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = 2200.0
+offset_top = 1376.0
+offset_right = 5704.0
+offset_bottom = 3984.0
+color = Color(0.5489402, 0.7206192, 0.40286663, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(3154.7876, 3150.081)
+polygon = PackedVector2Array(2549.2124, -1790.081, 2533.2124, -2862.081, -1642.7876, -2958.081, -1722.7876, 705.91895, -962.7876, 1177.919, 317.2124, 1193.919, 317.2124, 809.91895, -370.7876, 809.91895, -370.7876, 705.91895, -466.7876, 705.91895, -466.7876, 393.91895, -370.7876, 393.91895, -370.7876, -238.08105, -834.7876, -238.08105, -834.7876, -1750.081, 2549.2124, -1766.081)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(5448, 280, 5456, 3224, 4072, 3224, 4072, 3976, 2784, 3976, 2784, 4336, 6280, 4336, 6232, 272)
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+offset_left = 368.0
+offset_top = 456.0
+offset_right = 560.0
+offset_bottom = 576.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="."]
+offset_left = -16.0
+offset_top = 1240.0
+offset_right = 424.0
+offset_bottom = 1360.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="."]
+offset_left = 704.0
+offset_top = 184.0
+offset_right = 2672.0
+offset_bottom = 256.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="."]
+offset_left = -824.0
+offset_top = -320.0
+offset_right = 1784.0
+offset_bottom = -176.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="."]
+offset_left = 1064.0
+offset_top = -232.0
+offset_right = 1200.0
+offset_bottom = 208.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="."]
+offset_left = 408.0
+offset_top = 384.0
+offset_right = 528.0
+offset_bottom = 1720.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="."]
+offset_left = -216.0
+offset_top = -656.0
+offset_right = -80.0
+offset_bottom = -216.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="."]
+offset_left = 272.0
+offset_top = -632.0
+offset_right = 408.0
+offset_bottom = -192.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="."]
+offset_left = 760.0
+offset_top = -664.0
+offset_right = 896.0
+offset_bottom = -224.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="."]
+offset_left = 1272.0
+offset_top = -656.0
+offset_right = 1408.0
+offset_bottom = -216.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="."]
+offset_left = 632.0
+offset_top = 144.0
+offset_right = 768.0
+offset_bottom = 304.0
+color = Color(0.84681916, 0.8525605, 0.7622949, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 216.0
+offset_top = 16.0
+offset_right = 704.0
+offset_bottom = 496.0
+color = Color(0.33348826, 0.41185275, 0.3646251, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = -392.0
+offset_top = -856.0
+offset_right = 48.0
+offset_bottom = -504.0
+color = Color(0.57112306, 0.5014737, 0.27787745, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 112.0
+offset_top = -856.0
+offset_right = 552.0
+offset_bottom = -504.0
+color = Color(0.57112306, 0.5014737, 0.27787745, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 608.0
+offset_top = -856.0
+offset_right = 1048.0
+offset_bottom = -504.0
+color = Color(0.57112306, 0.5014737, 0.27787745, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 1112.0
+offset_top = -856.0
+offset_right = 1552.0
+offset_bottom = -504.0
+color = Color(0.57112306, 0.5014737, 0.27787745, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+offset_left = 1768.0
+offset_top = -488.0
+offset_right = 2144.0
+offset_bottom = -96.0
+color = Color(0.57254905, 0.5019608, 0.2784314, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+offset_left = -840.0
+offset_top = 520.0
+offset_right = -240.0
+offset_bottom = 1640.0
+color = Color(0.5403902, 0.7951926, 0.7526558, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="."]
+offset_left = 1048.0
+offset_top = 840.0
+offset_right = 2712.0
+offset_bottom = 1664.0
+color = Color(0.5403902, 0.7951926, 0.7526558, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+offset_left = -336.0
+offset_top = 1152.0
+offset_bottom = 1464.0
+color = Color(0.46702462, 0.3804347, 0.27618936, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ss2vc")]
+position = Vector2(456, 536)
+scale = Vector2(0.5200001, 0.54545456)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

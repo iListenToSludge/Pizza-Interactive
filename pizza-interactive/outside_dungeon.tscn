@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdmxcb5ta3uj4"]
+
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="1_78cne"]
+
+[node name="Outside Dungeon" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-240, -256)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_right = 2192.0
+offset_bottom = 1128.0
+color = Color(0.54901963, 0.72156864, 0.40392157, 1)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-24, 248, 632, 248, 632, 608, 1744, 608, 1736, 256, 2224, 256, 2224, -560, -24, -552)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(112, 248, 112, 920, 1736, 920, 1736, 888, 1816, 888, 1816, 672, 1736, 672, 1736, 608, 1736, 256, 2248, 256, 2248, 1296, -48, 1296, -48, 248)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = -248.0
+offset_top = -816.0
+offset_right = 1984.0
+color = Color(0.3394275, 0.46453297, 0.23108956, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+offset_left = -256.0
+offset_top = 664.0
+offset_right = 2008.0
+offset_bottom = 1576.0
+color = Color(0.3394275, 0.46453297, 0.23108956, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 384.0
+offset_top = -264.0
+offset_right = 1504.0
+offset_bottom = 352.0
+color = Color(0.3394275, 0.46453297, 0.23108956, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -240.0
+offset_top = 136.0
+offset_right = 232.0
+offset_bottom = 208.0
+color = Color(0.8452414, 0.9001124, 0.7399984, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+offset_left = 1416.0
+offset_top = 416.0
+offset_right = 1568.0
+offset_bottom = 632.0
+color = Color(0.8452414, 0.9001124, 0.7399984, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 240.0
+offset_top = 504.0
+offset_right = 1520.0
+offset_bottom = 576.0
+color = Color(0.8452414, 0.9001124, 0.7399984, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 184.0
+offset_top = 136.0
+offset_right = 256.0
+offset_bottom = 576.0
+color = Color(0.8452414, 0.9001124, 0.7399984, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+offset_left = 1496.0
+offset_right = 2008.0
+offset_bottom = 872.0
+color = Color(0.48780352, 0.47498035, 0.5111904, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_78cne")]
+position = Vector2(50, 170)
+scale = Vector2(0.5200001, 0.54545456)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
