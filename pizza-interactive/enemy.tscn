@@ -2,33 +2,45 @@
 
 [ext_resource type="Script" uid="uid://t5bg0qtw7a0o" path="res://character_body_2d.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://camkl1pda7ja8" path="res://icon.svg" id="2_qi2p4"]
-[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="3_qi2p4"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
-radius = 397.29083
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iifgy"]
-radius = 61.03278
+radius = 61.294373
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
+radius = 250.12796
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gyqm"]
+radius = 85.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+motion_mode = 1
 script = ExtResource("1_4gyqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qi2p4")
 offset = Vector2(0, -6)
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iifgy")
+
 [node name="detection_area" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 0
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
 position = Vector2(4, 3)
 shape = SubResource("CircleShape2D_qi2p4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_iifgy")
+[node name="hitbox" type="Area2D" parent="."]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_qi2p4")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_4gyqm")
+debug_color = Color(0.7034006, 0.015544187, 0.17467847, 0.41960785)
+
+[node name="attack_timer" type="Timer" parent="hitbox"]
+one_shot = true
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="timeout" from="hitbox/attack_timer" to="." method="_on_attack_timer_timeout"]

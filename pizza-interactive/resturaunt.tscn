@@ -53,4 +53,4 @@ scale = Vector2(0.39880437, 0.40742108)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_x0n7s")]
-position = Vector2(410, 265)
+position = Vector2(558, 549)
