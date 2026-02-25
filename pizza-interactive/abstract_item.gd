@@ -1,11 +1,14 @@
-extends CollisionShape2D
+extends Sprite2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+ 
+@export var ID = "0"
+ 
+func _ready():
+	texture = load("res://assets/curated/" + ItemData.get_texture(ID))
+ 
+ 
+func _on_body_entered(body):
+	get_parent().find_child("Inventory").add_item(ID)
+	queue_free()
+ 
+ #12:02

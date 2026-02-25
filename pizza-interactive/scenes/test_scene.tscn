@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://1hlnmtdlwvo3"]
+[gd_scene load_steps=10 format=3 uid="uid://1hlnmtdlwvo3"]
 
 [ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="1_7ddre"]
 [ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slot.tscn" id="1_g7g4h"]
+[ext_resource type="Script" uid="uid://baskqj81i3xvo" path="res://scenes/ui.gd" id="1_wtsjf"]
 [ext_resource type="PackedScene" uid="uid://btt3dxljynm5b" path="res://scenes/passive_slot.tscn" id="2_j8ivh"]
 [ext_resource type="Script" uid="uid://c3rd0myu7s7bs" path="res://scenes/character.gd" id="2_nd71p"]
+[ext_resource type="PackedScene" uid="uid://d3g1pwq28dbbp" path="res://scenes/active_slot.tscn" id="6_h3xc6"]
+[ext_resource type="PackedScene" uid="uid://clb8o8qpxv40h" path="res://player.tscn" id="6_rnaij"]
+[ext_resource type="PackedScene" uid="uid://cm6kcfqiwsvvo" path="res://abstract_item.tscn" id="7_h3xc6"]
+[ext_resource type="PackedScene" path="res://character.tscn" id="9_h3xc6"]
 
 [node name="TestScene" type="Node2D"]
 position = Vector2(-1, -1)
@@ -13,6 +18,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_wtsjf")
 
 [node name="Inventory" type="GridContainer" parent="UI"]
 layout_mode = 0
@@ -80,33 +86,66 @@ script = ExtResource("2_nd71p")
 
 [node name="PassiveSlot" parent="UI/Character" instance=ExtResource("2_j8ivh")]
 layout_mode = 0
-offset_left = 104.99999
-offset_top = 83.0
-offset_right = 172.0
-offset_bottom = 148.0
+offset_left = 151.0
+offset_top = 81.0
+offset_right = 218.0
+offset_bottom = 146.0
 scale = Vector2(1.9535438, 1.8004054)
 slot_type = 1
 
 [node name="PassiveSlot2" parent="UI/Character" instance=ExtResource("2_j8ivh")]
 layout_mode = 0
-offset_left = 107.0
-offset_top = 236.0
-offset_right = 174.0
-offset_bottom = 301.0
+offset_left = 152.0
+offset_top = 231.00002
+offset_right = 219.0
+offset_bottom = 296.0
 scale = Vector2(1.9535438, 1.8004054)
 slot_type = 2
 
 [node name="PassiveSlot3" parent="UI/Character" instance=ExtResource("2_j8ivh")]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 396.0
-offset_right = 176.0
-offset_bottom = 461.0
+offset_left = 152.0
+offset_top = 386.0
+offset_right = 219.0
+offset_bottom = 451.0
 scale = Vector2(1.9535438, 1.8004054)
 slot_type = 3
+
+[node name="ActiveSlot" parent="UI/Character" instance=ExtResource("6_h3xc6")]
+layout_mode = 0
+offset_left = 13.999998
+offset_top = 295.0
+offset_right = 81.0
+offset_bottom = 360.0
+scale = Vector2(1.7200005, 1.72)
+slot_type = 4
 
 [node name="ATK" type="Label" parent="UI"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="player" parent="." instance=ExtResource("6_rnaij")]
+
+[node name="AbstractItem" parent="." instance=ExtResource("7_h3xc6")]
+position = Vector2(374, 281)
+
+[node name="AbstractItem2" parent="." instance=ExtResource("7_h3xc6")]
+position = Vector2(462, 218)
+ID = "1"
+
+[node name="AbstractItem3" parent="." instance=ExtResource("7_h3xc6")]
+position = Vector2(558, 285)
+ID = "2"
+
+[node name="AbstractItem4" parent="." instance=ExtResource("7_h3xc6")]
+position = Vector2(524, 378)
+ID = "3"
+
+[node name="AbstractItem5" parent="." instance=ExtResource("7_h3xc6")]
+position = Vector2(402, 380)
+ID = "4"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("9_h3xc6")]
+position = Vector2(510, 554)
