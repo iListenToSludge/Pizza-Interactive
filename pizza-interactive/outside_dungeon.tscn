@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdmxcb5ta3uj4"]
+[gd_scene load_steps=3 format=3 uid="uid://bdmxcb5ta3uj4"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="1_78cne"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_78cne"]
+radius = 230.5
+height = 864.0
 
 [node name="Outside Dungeon" type="Node2D"]
 
@@ -66,22 +70,20 @@ offset_right = 256.0
 offset_bottom = 576.0
 color = Color(0.8452414, 0.9001124, 0.7399984, 1)
 
-[node name="ColorRect10" type="ColorRect" parent="."]
-offset_left = 1496.0
-offset_right = 2008.0
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1496, 0)
+
+[node name="ColorRect10" type="ColorRect" parent="StaticBody2D2"]
+offset_right = 512.0
 offset_bottom = 872.0
 color = Color(0.48780352, 0.47498035, 0.5111904, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect10"]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 478.0
-offset_right = 141.0
-offset_bottom = 510.0
-text = "dungeon"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(240, 472)
+shape = SubResource("CapsuleShape2D_78cne")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_78cne")]
-position = Vector2(20.999939, 172)
+position = Vector2(50, 170)
 scale = Vector2(0.5200001, 0.54545456)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
