@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bj6ajoy4n3grh" path="res://character.gd" id="1_pjt0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa5vi"]
-size = Vector2(134, 124)
+size = Vector2(165, 149)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(554, 282)
@@ -13,17 +13,19 @@ motion_mode = 1
 script = ExtResource("1_pjt0s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16.5, 14)
+scale = Vector2(1.2578125, 1.21875)
 texture = ExtResource("1_glpr6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 2)
+position = Vector2(-12.5, 14.5)
 shape = SubResource("RectangleShape2D_wa5vi")
 debug_color = Color(0.9694913, 0, 0.464136, 0.41960785)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -52.0
+offset_left = -80.0
 offset_top = -96.0
-offset_right = 55.0
+offset_right = 47.0
 offset_bottom = -64.0
 min_value = 1.0
 value = 100.0

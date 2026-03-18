@@ -41,6 +41,14 @@ debug_color = Color(0.7034006, 0.015544187, 0.17467847, 0.41960785)
 [node name="attack_timer" type="Timer" parent="hitbox"]
 one_shot = true
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -87.0
+offset_top = -114.0
+offset_right = 88.0
+offset_bottom = -87.0
+min_value = 1.0
+value = 100.0
+
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
 [connection signal="timeout" from="hitbox/attack_timer" to="." method="_on_attack_timer_timeout"]
