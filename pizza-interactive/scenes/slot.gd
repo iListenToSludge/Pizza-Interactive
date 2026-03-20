@@ -7,7 +7,7 @@ class_name Slot
 
 var filled: bool = false
 
-func _get_drag_data(at_position):
+func _get_drag_data(_at_position):
 	set_drag_preview(get_preview())
 	return texture_rect
 

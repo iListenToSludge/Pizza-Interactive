@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d3g1pwq28dbbp" path="res://scenes/active_slot.tscn" id="6_h3xc6"]
 [ext_resource type="PackedScene" uid="uid://clb8o8qpxv40h" path="res://player.tscn" id="6_rnaij"]
 [ext_resource type="PackedScene" uid="uid://cm6kcfqiwsvvo" path="res://abstract_item.tscn" id="7_h3xc6"]
-[ext_resource type="PackedScene" path="res://character.tscn" id="9_h3xc6"]
+[ext_resource type="PackedScene" uid="uid://d0qca7dk7rtkv" path="res://character.tscn" id="9_h3xc6"]
 
 [node name="TestScene" type="Node2D"]
 position = Vector2(-1, -1)
@@ -32,51 +32,39 @@ script = ExtResource("1_7ddre")
 
 [node name="Slot" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot2" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot3" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot4" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot5" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot6" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot7" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot8" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot9" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot10" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot11" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Slot12" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-slot_type = null
 
 [node name="Character" type="Control" parent="UI"]
 anchors_preset = 0

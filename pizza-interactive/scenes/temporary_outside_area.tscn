@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk3ymtctg5kgr"]
+
+[ext_resource type="PackedScene" path="res://character.tscn" id="1_7ahid"]
+
+[node name="temporary outside area" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(6, 0)
+polygon = PackedVector2Array(-6, -142, -6, 0, 1162, -5, 1165, 646, -1, 647, -2, 890, 1374, 887, 1340, -124)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-190, -137, -1, -136, 7, 893, -196, 898)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 6.0
+offset_top = -3.0
+offset_right = 1168.0
+offset_bottom = 648.0
+color = Color(0.6845445, 0.8992877, 0.7149399, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 379.0
+offset_top = 30.0
+offset_right = 761.0
+offset_bottom = 130.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_7ahid")]
+position = Vector2(94, 148)

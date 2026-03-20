@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 @export var bullet_node : PackedScene
 @onready var speed: Timer = $Speed
 
