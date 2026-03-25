@@ -14,28 +14,12 @@
 [node name="TestScene" type="Node2D"]
 position = Vector2(-1, -1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -54.0
-offset_top = -69.0
-offset_right = 400.0
-offset_bottom = -10.0
-theme_override_font_sizes/normal_font_size = 39
-text = "CAT DESIGN GOES HERE"
-
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 7.0
 offset_top = -2.0
 offset_right = 1167.0
 offset_bottom = 664.0
 color = Color(0.70980394, 0.7411765, 1, 1)
-
-[node name="ColorRect" type="ColorRect" parent="ColorRect"]
-layout_mode = 0
-offset_left = 36.0
-offset_top = 19.0
-offset_right = 355.0
-offset_bottom = 318.0
-color = Color(1, 0.84705883, 1, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="ColorRect"]
 layout_mode = 0
@@ -65,7 +49,7 @@ offset_bottom = 40.0
 script = ExtResource("1_wtsjf")
 
 [node name="Inventory" type="GridContainer" parent="UI"]
-layout_mode = 0
+layout_mode = 1
 offset_left = 61.0
 offset_top = 355.0
 offset_right = 453.0
@@ -121,6 +105,11 @@ layout_mode = 2
 
 [node name="Slot16" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
+
+[node name="JetpackCatOverwatch" type="Sprite2D" parent="UI/Inventory"]
+position = Vector2(48.411514, -70.46597)
+scale = Vector2(0.33619106, 0.34712303)
+texture = ExtResource("10_s36qc")
 
 [node name="Character" type="Control" parent="UI"]
 anchors_preset = 0
@@ -194,7 +183,3 @@ ID = "4"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("9_h3xc6")]
 position = Vector2(-492, 127)
-
-[node name="JetpackCatOverwatch" type="Sprite2D" parent="."]
-position = Vector2(205, 152)
-texture = ExtResource("10_s36qc")
