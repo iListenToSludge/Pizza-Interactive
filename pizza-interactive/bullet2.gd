@@ -9,7 +9,7 @@ func _physics_process(delta):
 
 func _on_body_entered(body):
 	if body.has_method("take_damage"):
-		body.take_damage(10)
+		body.take_damage(10,global_position)
 	queue_free()
 
 

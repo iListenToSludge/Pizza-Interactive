@@ -4,9 +4,15 @@ var speed = 200.0
 var player_chase = false
 var player: Node2D = null
 var can_attack = true
+var knockback_velocity := Vector2.ZERO
+var knockback_decay := 1000.0
+
 @export var health := 100
 @export var max_health := 100
 func _physics_process(delta):
+	if knockback_velocity.length() > 0:
+		velocity = knockback_velocity
+		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, knockback_decay * delta)
 	if player_chase and player != null:
 		var direction = (player.global_position - global_position).normalized()
 		
@@ -24,7 +30,7 @@ func _physics_process(delta):
 	move_and_slide()
 func attack():
 	if player != null and player.has_method("take_damage"):
-		player.take_damage(30)
+		player.take_damage(30, global_position)
 	print("Enemy attacks the player!")
 	can_attack = false
 	$hitbox/attack_timer.start()
@@ -49,12 +55,13 @@ func _ready():
 	$ProgressBar.max_value = max_health
 	$ProgressBar.value = health
 
-func take_damage(amount: int):
+func take_damage(amount: int, source_position: Vector2):
 	health -= amount
 	$ProgressBar.value = health   # ← THIS is what you're missing
 	
 	print("Enemy health:", health)
-
+	var direction = (global_position - source_position).normalized()
+	knockback_velocity = direction * 500
 	if health <= 0:
 		die()
 

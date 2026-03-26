@@ -16,17 +16,19 @@ var is_dashing := false
 var can_dash := true
 var dash_direction := Vector2.ZERO
 var dash_timer := 0.0
-
+var knockback_velocity := Vector2.ZERO
+var knockback_decay := 1200.0
 
 
 func _ready():
 	$ProgressBar.value = health
 
-func take_damage(amount):
+func take_damage(amount, source_position: Vector2):
 	health -= amount
 	$ProgressBar.value = health
 	print("Player health: ", health)
-	
+	var direction = (global_position - source_position).normalized()
+	knockback_velocity = direction * 600
 	if health <= 0:
 		die()
 func die():
@@ -60,7 +62,9 @@ func _physics_process(delta: float) -> void:
 	# Shooting (now works again)
 	if Input.is_action_just_pressed("shoot"):
 		fire()
-
+	if knockback_velocity.length() > 0:
+		velocity += knockback_velocity
+		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, knockback_decay * delta)
 	move_and_slide()
 
 func fire():
