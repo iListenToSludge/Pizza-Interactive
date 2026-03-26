@@ -43,17 +43,23 @@ HEIGHT"
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 7.0
+offset_top = -2.0
+offset_right = 1166.0
+offset_bottom = 651.0
 script = ExtResource("1_wtsjf")
 
 [node name="Inventory" type="GridContainer" parent="UI"]
 layout_mode = 1
-offset_left = 61.0
-offset_top = 355.0
-offset_right = 453.0
-offset_bottom = 483.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 51.999996
+offset_top = 356.99997
+offset_right = -756.68896
+offset_bottom = -210.26062
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(2.974499, 2.880823)
 columns = 8
 script = ExtResource("1_7ddre")
