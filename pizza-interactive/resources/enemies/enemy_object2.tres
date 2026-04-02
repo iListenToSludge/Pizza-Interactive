@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EnemyResource" load_steps=2 format=3 uid="uid://cbslojc7nt4t1"]
+
+[ext_resource type="Script" uid="uid://dc38hdthkgxgl" path="res://resources/enemies/enemy_resource.gd" id="1_s0qfx"]
+
+[resource]
+script = ExtResource("1_s0qfx")
+EnemyName = "Filler"
+metadata/_custom_type_script = "uid://dc38hdthkgxgl"

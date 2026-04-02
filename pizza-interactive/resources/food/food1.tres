@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="FoodResource" load_steps=2 format=3 uid="uid://dp3hcv0jv6tn3"]
+
+[ext_resource type="Script" uid="uid://dwpixwacvrmm2" path="res://resources/food/food_resource.gd" id="1_l8urq"]
+
+[resource]
+script = ExtResource("1_l8urq")
+FoodName = "gulash"
+metadata/_custom_type_script = "uid://dwpixwacvrmm2"

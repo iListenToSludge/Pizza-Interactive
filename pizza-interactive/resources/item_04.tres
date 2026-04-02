@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://s853l67mbf08"]
+
+[ext_resource type="Texture2D" uid="uid://bi71b6pa4w6m7" path="res://assets/curated/head.png" id="1_2dmfn"]
+[ext_resource type="Script" uid="uid://c8h7sowh41qek" path="res://resources/item_resource.gd" id="2_4j7v2"]
+
+[resource]
+script = ExtResource("2_4j7v2")
+item_texture = ExtResource("1_2dmfn")
+item_name = "Egg"
+metadata/_custom_type_script = "uid://c8h7sowh41qek"

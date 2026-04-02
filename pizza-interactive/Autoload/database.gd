@@ -1,19 +1,23 @@
 extends Node
+# Autoload: ItemData
 
 var content : Dictionary
- 
-func _ready():
-	var file = FileAccess.open("res://Autoload/database.json",FileAccess.READ)
- 
-	content = JSON.parse_string(file.get_as_text())
- 
-	file.close()
+var item_database_resource : ItemResourceDatabase
 
-func get_texture(ID = "0"):
-	return content[ID]["texture"]
+
+func _ready():
+	item_database_resource = load("res://resources/main_item_database.tres")
+	#var file = FileAccess.open("res://Autoload/database.json",FileAccess.READ)
  
-func get_ATK(ID = "0"):
-	return content[ID]["ATK"]
+	content = item_database_resource.item_resource_dictionary #JSON.parse_string(file.get_as_text())
  
-func get_slot_type(ID = "0"):
-	return content[ID]["slot_type"]
+	#file.close()
+
+func get_texture(ID : int = 0) -> Texture2D:
+	return (content[ID] as ItemResource).item_texture
+ 
+func get_ATK(ID : int = 0):
+	return (content[ID] as ItemResource).item_atk_power
+ 
+func get_slot_type(ID : int = 0):
+	return (content[ID] as ItemResource).item_slot_type

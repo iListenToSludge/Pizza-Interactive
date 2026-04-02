@@ -1,5 +1,8 @@
 extends Control
+class_name RootUIControl
+## This controls the visibility of the inventory screen.
+
 
 func _input(event):
 	if event.is_action_pressed("inventory"):
-		visible = !visible
+		self.visible = !self.visible
