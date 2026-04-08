@@ -203,6 +203,7 @@ shape = SubResource("RectangleShape2D_0eybj")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 292.0

@@ -11,4 +11,3 @@ func _on_body_entered(_body):
 	get_parent().find_child("Inventory").add_item(ID)
 	queue_free()
  
- #12:02
