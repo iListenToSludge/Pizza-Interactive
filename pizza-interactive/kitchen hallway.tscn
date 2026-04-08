@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvdi8qjg07775"]
 
-[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="1_1hywo"]
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1hywo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_07sd7"]
 radius = 26.019224

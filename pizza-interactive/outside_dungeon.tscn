@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdmxcb5ta3uj4"]
 
-[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="1_78cne"]
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_78cne"]
 
 [node name="Outside Dungeon" type="Node2D"]
 

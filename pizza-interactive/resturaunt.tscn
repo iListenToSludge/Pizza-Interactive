@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dwpoh0ecxixm8"]
 
 [ext_resource type="PackedScene" uid="uid://cf7s266nqwrwq" path="res://scene_trigger.tscn" id="1_x0n7s"]
-[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://character.tscn" id="2_0eybj"]
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="2_0eybj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shxr0"]
 radius = 9.401882
