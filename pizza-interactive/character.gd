@@ -16,14 +16,17 @@ var is_dashing := false
 var can_dash := true
 var dash_direction := Vector2.ZERO
 var dash_timer := 0.0
-
+@export var melee_damage := 25
+var can_melee := true
 
 
 func _ready():
 	$ProgressBar.value = health
-
+	collision_layer = 2  # This forces the player onto Layer 2 in code
+	print("Player Layer confirmed as: ", collision_layer)
 func take_damage(amount):
 	health -= amount
+	health = clamp(health, 0, max_health)
 	$ProgressBar.value = health
 	print("Player health: ", health)
 	
@@ -32,9 +35,9 @@ func take_damage(amount):
 func die():
 	player_alive = false
 	print("Player has died!")
-
 	velocity = Vector2.ZERO
-
+	$CollisionShape2D.set_deferred("disabled", true)
+	self.visible = false
 func _physics_process(delta: float) -> void:
 	if !player_alive:
 		return
@@ -44,8 +47,8 @@ func _physics_process(delta: float) -> void:
 	# Start dash
 	if Input.is_action_just_pressed("dash") and can_dash:
 		start_dash()
-
-	# Handle dash timing
+	
+	
 	if is_dashing:
 		dash_timer -= delta
 		velocity = dash_direction * dash_speed
@@ -60,8 +63,27 @@ func _physics_process(delta: float) -> void:
 	# Shooting (now works again)
 	if Input.is_action_just_pressed("shoot"):
 		fire()
+	if Input.is_action_just_pressed("melee") and can_melee:
+		melee()
 
 	move_and_slide()
+
+func melee():
+	print("Melee button pressed!")
+	can_melee = false
+	$MeleeTimer.start() # Start the cooldown
+	
+	# Get all overlapping bodies in the MeleeRange Area2D
+	var targets = $MeleeRange.get_overlapping_bodies()
+	print("Found targets: ", targets)
+	for target in targets:
+		# Ensure we aren't hitting ourselves and the target can take damage
+		if target != self and target.has_method("take_damage"):
+			target.take_damage(melee_damage)
+			print("Hit enemy for: ", melee_damage)
+func _on_melee_timer_timeout() -> void:
+	can_melee = true
+
 
 func fire():
 	var bullet = bullet_path.instantiate()
