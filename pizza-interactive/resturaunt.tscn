@@ -47,7 +47,7 @@ scale = Vector2(7.517571, 1.8379694)
 color = Color(0.958692, 0.83814794, 0.91022235, 1)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0eybj")]
-position = Vector2(551, 243)
+position = Vector2(557.00006, 220)
 scale = Vector2(0.39880437, 0.40742108)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
