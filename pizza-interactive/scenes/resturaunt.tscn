@@ -1,11 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwpoh0ecxixm8"]
+[gd_scene load_steps=8 format=3 uid="uid://dwpoh0ecxixm8"]
 
 [ext_resource type="PackedScene" uid="uid://d0qca7dk7rtkv" path="res://character.tscn" id="1_4tgn2"]
+[ext_resource type="Script" uid="uid://bkaq8hmwlfb4u" path="res://scenes/resturaunt.gd" id="1_eecnk"]
 [ext_resource type="Script" uid="uid://dty4g6eut2dps" path="res://area_2d.gd" id="2_kdfyq"]
-[ext_resource type="Script" uid="uid://baskqj81i3xvo" path="res://scenes/ui.gd" id="3_hyywh"]
-[ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="4_e73pp"]
-[ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="5_a4a32"]
-[ext_resource type="Texture2D" uid="uid://dxw0cxbtijuo" path="res://scenes/jetpack cat overwatch.webp" id="6_dsgja"]
+[ext_resource type="PackedScene" uid="uid://c206wvkbosmc" path="res://pause_menu.tscn" id="7_tswjw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shxr0"]
 radius = 9.401882
@@ -19,6 +17,7 @@ height = 120.0
 size = Vector2(204, 93.5)
 
 [node name="Resturaunt" type="Node2D"]
+script = ExtResource("1_eecnk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-99, 82.99998)
@@ -200,80 +199,7 @@ script = ExtResource("2_kdfyq")
 position = Vector2(534, -22.75)
 shape = SubResource("RectangleShape2D_0eybj")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI" type="Control" parent="CanvasLayer"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 292.0
-offset_top = 105.99997
-offset_right = 1451.0
-offset_bottom = 759.0
-scale = Vector2(0.5199994, 0.51938933)
-script = ExtResource("3_hyywh")
-
-[node name="Inventory" type="GridContainer" parent="CanvasLayer/UI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 51.999996
-offset_top = 356.99997
-offset_right = -756.68896
-offset_bottom = -210.26062
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.974499, 2.880823)
-columns = 6
-script = ExtResource("4_e73pp")
-
-[node name="Slot" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot2" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot3" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot4" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot5" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot6" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot7" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot8" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot9" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot10" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot11" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="Slot12" parent="CanvasLayer/UI/Inventory" instance=ExtResource("5_a4a32")]
-layout_mode = 2
-
-[node name="JetpackCatOverwatch" type="Sprite2D" parent="CanvasLayer/UI/Inventory"]
-position = Vector2(48.411514, -70.46597)
-scale = Vector2(0.33619106, 0.34712303)
-texture = ExtResource("6_dsgja")
-
-[node name="ATK" type="Label" parent="CanvasLayer/UI"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="CanvasLayer" parent="." instance=ExtResource("7_tswjw")]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

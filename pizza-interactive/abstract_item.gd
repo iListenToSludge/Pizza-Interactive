@@ -8,6 +8,5 @@ func _ready():
  
  
 func _on_body_entered(_body):
-	get_parent().find_child("Inventory").add_item(ID)
+	get_parent().find_child("Inventory").add_item(int(ID))
 	queue_free()
- 
