@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwpoh0ecxixm8"]
+[gd_scene load_steps=8 format=3 uid="uid://ccnnkfoiaha65"]
 
 [ext_resource type="PackedScene" uid="uid://d0qca7dk7rtkv" path="res://character.tscn" id="1_4tgn2"]
-[ext_resource type="Script" uid="uid://bkaq8hmwlfb4u" path="res://scenes/resturaunt.gd" id="1_eecnk"]
-[ext_resource type="Script" uid="uid://dty4g6eut2dps" path="res://area_2d.gd" id="2_kdfyq"]
-[ext_resource type="PackedScene" uid="uid://c206wvkbosmc" path="res://pause_menu.tscn" id="7_tswjw"]
+[ext_resource type="Script" path="res://area_2d.gd" id="2_kdfyq"]
+[ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="4_e73pp"]
+[ext_resource type="PackedScene" path="res://pause_menu.tscn" id="7_tswjw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shxr0"]
 radius = 9.401882
@@ -17,7 +17,7 @@ height = 120.0
 size = Vector2(204, 93.5)
 
 [node name="Resturaunt" type="Node2D"]
-script = ExtResource("1_eecnk")
+script = ExtResource("4_e73pp")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-99, 82.99998)
