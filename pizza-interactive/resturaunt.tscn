@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dwpoh0ecxixm8"]
 
 [ext_resource type="PackedScene" uid="uid://cf7s266nqwrwq" path="res://scene_trigger.tscn" id="1_x0n7s"]
-[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="2_0eybj"]
+[ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="2_x0n7s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shxr0"]
 radius = 9.401882
@@ -295,8 +295,7 @@ scale = Vector2(7.517571, 1.8379694)
 shape = SubResource("CapsuleShape2D_e16pn")
 debug_color = Color(0.87991565, 0.00037041426, 0.8248162, 0.41960785)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_0eybj")]
-position = Vector2(551, 243)
-scale = Vector2(0.35880437, 0.36741865)
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_x0n7s")]
+position = Vector2(535, 205)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
