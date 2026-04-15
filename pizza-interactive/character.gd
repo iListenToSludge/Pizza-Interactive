@@ -18,6 +18,11 @@ var dash_direction := Vector2.ZERO
 var dash_timer := 0.0
 @export var melee_damage := 25
 var can_melee := true
+@export var max_ammo := 10
+@export var reload_time := 1.5
+
+var current_ammo := max_ammo
+var is_reloading := false
 
 
 func _ready():
@@ -62,10 +67,15 @@ func _physics_process(delta: float) -> void:
 
 	# Shooting (now works again)
 	if Input.is_action_just_pressed("shoot"):
-		fire()
+		if current_ammo > 0 and !is_reloading:
+			fire()
+		elif current_ammo <= 0:
+			reload()
 	if Input.is_action_just_pressed("melee") and can_melee:
 		melee()
-
+	if Input.is_action_just_pressed("reload"):
+		reload()
+	
 	move_and_slide()
 
 func melee():
@@ -86,11 +96,18 @@ func _on_melee_timer_timeout() -> void:
 
 
 func fire():
+	current_ammo -= 1
+	print("Ammo:", current_ammo)
+
 	var bullet = bullet_path.instantiate()
 	bullet.direction = (get_global_mouse_position() - global_position).normalized()
 	bullet.global_position = global_position + bullet.direction * 40
 	bullet.rotation = bullet.direction.angle()
 	get_parent().add_child(bullet)
+
+	# Auto reload when empty
+	if current_ammo <= 0:
+		reload()
 
 func player():
 	pass
@@ -133,3 +150,16 @@ func start_dash():
 	# Cooldown timer (this one can still use await safely)
 	await get_tree().create_timer(dash_cooldown).timeout
 	can_dash = true
+
+func reload():
+	if is_reloading:
+		return
+
+	is_reloading = true
+	print("Reloading...")
+
+	await get_tree().create_timer(reload_time).timeout
+
+	current_ammo = max_ammo
+	is_reloading = false
+	print("Reloaded!")
