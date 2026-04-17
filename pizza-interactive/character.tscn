@@ -1,7 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://btwlir1t7bme"]
+[gd_scene load_steps=10 format=3 uid="uid://btwlir1t7bme"]
 
-[ext_resource type="Texture2D" path="res://icon.svg" id="1_glpr6"]
-[ext_resource type="Script" path="res://character.gd" id="1_pjt0s"]
+[ext_resource type="Script" uid="uid://c3rd0myu7s7bs" path="res://scenes/character.gd" id="1_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://heklj7dfy0ay" path="res://assets/curated/cat character-Recovered-Sheet.png" id="2_pjt0s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyx3d"]
+atlas = ExtResource("2_pjt0s")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cplqq"]
+atlas = ExtResource("2_pjt0s")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6l1e"]
+atlas = ExtResource("2_pjt0s")
+region = Rect2(192, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnpi4"]
+atlas = ExtResource("2_pjt0s")
+region = Rect2(288, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wa5vi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyx3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cplqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6l1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnpi4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa5vi"]
 size = Vector2(165, 149)
@@ -16,10 +52,11 @@ collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_pjt0s")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-16.5, 14)
-scale = Vector2(1.2578125, 1.21875)
-texture = ExtResource("1_glpr6")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-14.5, 14.500002)
+scale = Vector2(3.354167, 3.2291665)
+sprite_frames = SubResource("SpriteFrames_wa5vi")
+frame_progress = 0.8136541
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-12.5, 14.5)
