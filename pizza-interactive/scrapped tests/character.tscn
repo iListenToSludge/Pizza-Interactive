@@ -1,21 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0qca7dk7rtkv"]
+[gd_scene load_steps=5 format=3 uid="uid://ctx1b4dq60qv"]
 
-[ext_resource type="Texture2D" uid="uid://camkl1pda7ja8" path="res://scrapped tests/icon.svg" id="1_glpr6"]
-[ext_resource type="Script" uid="uid://bj6ajoy4n3grh" path="res://scrapped tests/character.gd" id="1_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://camkl1pda7ja8" path="res://icon.svg" id="1_glpr6"]
+[ext_resource type="Script" uid="uid://bj6ajoy4n3grh" path="res://character.gd" id="1_pjt0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa5vi"]
-size = Vector2(134, 124)
+size = Vector2(165, 149)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_pjt0s"]
+radius = 123.146255
+
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(554, 282)
-collision_layer = 9
+collision_layer = 2
+collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_pjt0s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16.5, 14)
+scale = Vector2(1.2578125, 1.21875)
 texture = ExtResource("1_glpr6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(-12.5, 14.5)
 shape = SubResource("RectangleShape2D_wa5vi")
 debug_color = Color(0.9694913, 0, 0.464136, 0.41960785)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -80.0
+offset_top = -96.0
+offset_right = 47.0
+offset_bottom = -64.0
+min_value = 1.0
+value = 100.0
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(138, 7)
+
+[node name="MeleeRange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeRange"]
+position = Vector2(-12, 8)
+shape = SubResource("CircleShape2D_pjt0s")
+
+[node name="MeleeTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="MeleeTimer" to="." method="_on_melee_timer_timeout"]
