@@ -18,8 +18,8 @@ var dash_direction := Vector2.ZERO
 var dash_timer := 0.0
 @export var melee_damage := 25
 var can_melee := true
-@export var max_ammo := 10
-@export var reload_time := 1.5
+@export var max_ammo := 8
+@export var reload_time := 5
 
 var current_ammo := max_ammo
 var is_reloading := false
@@ -29,11 +29,10 @@ func _ready():
 	$ProgressBar.value = health
 	collision_layer = 2  # This forces the player onto Layer 2 in code
 	print("Player Layer confirmed as: ", collision_layer)
-func take_damage(amount):
+func take_damage(amount, _source_pos = Vector2.ZERO): 
 	health -= amount
 	health = clamp(health, 0, max_health)
 	$ProgressBar.value = health
-	print("Player health: ", health)
 	
 	if health <= 0:
 		die()
@@ -47,12 +46,9 @@ func _physics_process(delta: float) -> void:
 	if !player_alive:
 		return
 
-	look_at(get_global_mouse_position())
-
 	# Start dash
 	if Input.is_action_just_pressed("dash") and can_dash:
 		start_dash()
-	
 	
 	if is_dashing:
 		dash_timer -= delta
@@ -64,15 +60,22 @@ func _physics_process(delta: float) -> void:
 	else:
 		var direction := Input.get_vector("move left", "move right", "move up", "move down")
 		velocity = direction * max_speed
+		
+		
+		if direction != Vector2.ZERO:
+			rotation = direction.angle()
+		
 
-	# Shooting (now works again)
+	
 	if Input.is_action_just_pressed("shoot"):
 		if current_ammo > 0 and !is_reloading:
 			fire()
 		elif current_ammo <= 0:
 			reload()
+			
 	if Input.is_action_just_pressed("melee") and can_melee:
 		melee()
+		
 	if Input.is_action_just_pressed("reload"):
 		reload()
 	

@@ -38,7 +38,7 @@ func attack():
 	$hitbox/attack_timer.start()
 	
 	if player.has_method("take_damage"):
-		player.take_damage(30)
+		player.take_damage(15)
 	# Here is where you would call a function on the player like:
 	# player.take_damage(10)
 
@@ -65,7 +65,7 @@ func _ready():
 	$ProgressBar.max_value = max_health
 	$ProgressBar.value = health
 
-func take_damage(amount: int):
+func take_damage(amount: int, _position = Vector2.ZERO):
 	health -= amount
 	$ProgressBar.value = health   # ← THIS is what you're missing
 	
