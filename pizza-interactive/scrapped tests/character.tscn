@@ -1,7 +1,31 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctx1b4dq60qv"]
+[gd_scene load_steps=24 format=3 uid="uid://ctx1b4dq60qv"]
 
 [ext_resource type="Script" uid="uid://bj6ajoy4n3grh" path="res://scrapped tests/character.gd" id="1_pjt0s"]
 [ext_resource type="Texture2D" uid="uid://heklj7dfy0ay" path="res://assets/curated/cat character-Recovered-Sheet.png" id="2_ibgq6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bpbd"]
+atlas = ExtResource("2_ibgq6")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fw7k1"]
+atlas = ExtResource("2_ibgq6")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii16o"]
+atlas = ExtResource("2_ibgq6")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uj1d"]
+atlas = ExtResource("2_ibgq6")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fo5t"]
+atlas = ExtResource("2_ibgq6")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qne8"]
+atlas = ExtResource("2_ibgq6")
+region = Rect2(192, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p20xu"]
 atlas = ExtResource("2_ibgq6")
@@ -55,6 +79,39 @@ region = Rect2(288, 48, 48, 48)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4bpbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fw7k1")
+}],
+"loop": true,
+"name": &"idle_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii16o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uj1d")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fo5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qne8")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_p20xu")
 }, {
 "duration": 1.0,
@@ -106,46 +163,50 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa5vi"]
-size = Vector2(165, 149)
+size = Vector2(162.5, 227)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pjt0s"]
 radius = 123.146255
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(554, 282)
+position = Vector2(507, 277)
 collision_layer = 2
 collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_pjt0s")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-10.99999, 12.500013)
-scale = Vector2(3.3750002, 3.0625)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.0000143, 159.74998)
+scale = Vector2(5.8125, 5.7395825)
 sprite_frames = SubResource("SpriteFrames_p7inj")
-animation = &"walking_back"
+animation = &"idle_back"
+
+[node name="BulletSpawn" type="Marker2D" parent="."]
+position = Vector2(77, 214)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-12.5, 14.5)
+position = Vector2(1.25, 178.5)
 shape = SubResource("RectangleShape2D_wa5vi")
 debug_color = Color(0.9694913, 0, 0.464136, 0.41960785)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -80.0
-offset_top = -96.0
-offset_right = 47.0
-offset_bottom = -64.0
+offset_left = -67.0
+offset_top = 27.0
+offset_right = 60.0
+offset_bottom = 59.0
 min_value = 1.0
 value = 100.0
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(138, 7)
+position = Vector2(0, 120)
 
 [node name="MeleeRange" type="Area2D" parent="."]
+position = Vector2(28, 116)
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeRange"]
-position = Vector2(-12, 8)
+position = Vector2(-27, 62)
 shape = SubResource("CircleShape2D_pjt0s")
 
 [node name="MeleeTimer" type="Timer" parent="."]

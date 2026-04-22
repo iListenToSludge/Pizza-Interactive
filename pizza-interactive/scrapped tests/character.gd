@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
 var bullet_path=preload("res://bullet2.tscn")
+var last_direction: Vector2 = Vector2.RIGHT
+
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true 
@@ -63,7 +66,8 @@ func _physics_process(delta: float) -> void:
 		
 		
 		if direction != Vector2.ZERO:
-			rotation = direction.angle()
+			last_direction=direction
+			
 		
 
 	
@@ -78,7 +82,7 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("reload"):
 		reload()
-	
+	process_animation()
 	move_and_slide()
 
 func melee():
@@ -104,7 +108,7 @@ func fire():
 
 	var bullet = bullet_path.instantiate()
 	bullet.direction = (get_global_mouse_position() - global_position).normalized()
-	bullet.global_position = global_position + bullet.direction * 40
+	bullet.global_position = $BulletSpawn.global_position
 	bullet.rotation = bullet.direction.angle()
 	get_parent().add_child(bullet)
 
@@ -166,3 +170,22 @@ func reload():
 	current_ammo = max_ammo
 	is_reloading = false
 	print("Reloaded!")
+func process_animation() -> void:
+	if velocity != Vector2.ZERO:
+		play_animation("walking", last_direction)
+	else:
+		play_animation("idle", last_direction)
+
+
+func play_animation(prefix: String, dir: Vector2) -> void:
+	# Decide dominant direction (prevents flickering)
+	if abs(dir.x) > abs(dir.y):
+		# Horizontal movement
+		animated_sprite_2d.flip_h = dir.x > 0
+		animated_sprite_2d.play(prefix + "_left")
+	else:
+		# Vertical movement
+		if dir.y < 0:
+			animated_sprite_2d.play(prefix + "_back")
+		else:
+			animated_sprite_2d.play(prefix + "_front")
