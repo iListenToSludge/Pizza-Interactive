@@ -185,7 +185,7 @@ animation = &"idle_back"
 position = Vector2(77, 214)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.25, 178.5)
+position = Vector2(1, 185)
 shape = SubResource("RectangleShape2D_wa5vi")
 debug_color = Color(0.9694913, 0, 0.464136, 0.41960785)
 
@@ -206,7 +206,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeRange"]
-position = Vector2(-27, 62)
+position = Vector2(-27, 68)
 shape = SubResource("CircleShape2D_pjt0s")
 
 [node name="MeleeTimer" type="Timer" parent="."]
