@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ro3vfsskcpmb"]
 
-[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="2_0eybj"]
-[ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_x0n7s"]
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1pkq2"]
+[ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_v3g5v"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -46,11 +46,11 @@ offset_bottom = 372.20053
 scale = Vector2(7.517571, 1.8379694)
 color = Color(0.958692, 0.83814794, 0.91022235, 1)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_0eybj")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_1pkq2")]
 position = Vector2(552, 119)
 scale = Vector2(0.39880437, 0.40742108)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("2_x0n7s")]
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_v3g5v")]
 position = Vector2(558, 549)
