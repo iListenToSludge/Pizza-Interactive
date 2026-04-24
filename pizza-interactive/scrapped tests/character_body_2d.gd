@@ -7,6 +7,7 @@ var can_attack = true
 var player_in_attack_range = false
 @export var health := 100
 @export var max_health := 100
+
 func _physics_process(delta):
 	# 1. Safety check
 	if player == null or player.player_alive == false:
