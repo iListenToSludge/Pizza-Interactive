@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://1hlnmtdlwvo3"]
+[gd_scene load_steps=11 format=3 uid="uid://1hlnmtdlwvo3"]
 
 [ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="1_7ddre"]
 [ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="1_g7g4h"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d3g1pwq28dbbp" path="res://scenes/slots/active_slot.tscn" id="6_h3xc6"]
 [ext_resource type="PackedScene" uid="uid://clb8o8qpxv40h" path="res://player.tscn" id="6_rnaij"]
 [ext_resource type="PackedScene" uid="uid://cm6kcfqiwsvvo" path="res://abstract_item.tscn" id="7_h3xc6"]
+[ext_resource type="Texture2D" uid="uid://bi71b6pa4w6m7" path="res://assets/curated/head.png" id="10_6qxox"]
 [ext_resource type="Texture2D" uid="uid://dxw0cxbtijuo" path="res://scenes/jetpack cat overwatch.webp" id="10_s36qc"]
 
 [node name="TestScene" type="Node2D"]
@@ -181,8 +182,8 @@ ID = "2"
 
 [node name="AbstractItem4" parent="." instance=ExtResource("7_h3xc6")]
 position = Vector2(650, 251)
-ID = "3"
 
 [node name="AbstractItem5" parent="." instance=ExtResource("7_h3xc6")]
 position = Vector2(528, 253)
+texture = ExtResource("10_6qxox")
 ID = "4"
