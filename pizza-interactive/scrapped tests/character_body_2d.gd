@@ -7,6 +7,8 @@ var can_attack = true
 var player_in_attack_range = false
 @export var health := 100
 @export var max_health := 100
+@export var drop_scene: PackedScene
+@export var possible_drops := [0, 1, 2, 3, 4]
 
 func _physics_process(delta):
 	# 1. Safety check
@@ -65,6 +67,8 @@ func _ready():
 	print("Enemy is ready to fight!")
 	$ProgressBar.max_value = max_health
 	$ProgressBar.value = health
+	randomize()
+
 
 func take_damage(amount: int, _position = Vector2.ZERO):
 	health -= amount
@@ -77,8 +81,8 @@ func take_damage(amount: int, _position = Vector2.ZERO):
 
 func die():
 	print("Enemy died")
+	call_deferred("drop_item")
 	queue_free()
-
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
@@ -90,3 +94,12 @@ func _on_hitbox_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_in_attack_range = false
 		print("Player left range")
+
+func drop_item():
+	var item = drop_scene.instantiate()
+
+	var random_id = possible_drops[randi() % possible_drops.size()]
+	item.ID = random_id
+
+	item.global_position = global_position
+	get_parent().add_child(item)

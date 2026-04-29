@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dspjon02nq16r"]
+[gd_scene load_steps=7 format=3 uid="uid://dspjon02nq16r"]
 
 [ext_resource type="Script" uid="uid://t5bg0qtw7a0o" path="res://scrapped tests/character_body_2d.gd" id="1_4gyqm"]
+[ext_resource type="PackedScene" uid="uid://cm6kcfqiwsvvo" path="res://abstract_item.tscn" id="2_iifgy"]
 [ext_resource type="Texture2D" uid="uid://camkl1pda7ja8" path="res://scrapped tests/icon.svg" id="2_qi2p4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iifgy"]
@@ -17,6 +18,7 @@ collision_layer = 4
 collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_4gyqm")
+drop_scene = ExtResource("2_iifgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qi2p4")

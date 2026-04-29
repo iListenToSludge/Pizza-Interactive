@@ -29,6 +29,9 @@ var is_reloading := false
 
 
 func _ready():
+	add_to_group("player")
+	$ProgressBar.value = health
+	collision_layer = 2
 	$ProgressBar.value = health
 	collision_layer = 2  # This forces the player onto Layer 2 in code
 	print("Player Layer confirmed as: ", collision_layer)
