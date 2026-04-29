@@ -45,6 +45,12 @@ func die():
 	velocity = Vector2.ZERO
 	$CollisionShape2D.set_deferred("disabled", true)
 	self.visible = false
+	get_tree().paused = true
+	get_parent().get_node("DeathScreen").show()
+	
+
+
+
 func _physics_process(delta: float) -> void:
 	if !player_alive:
 		return

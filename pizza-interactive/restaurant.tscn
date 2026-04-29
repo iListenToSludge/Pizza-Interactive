@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ro3vfsskcpmb"]
+[gd_scene load_steps=4 format=3 uid="uid://ro3vfsskcpmb"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1pkq2"]
 [ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_v3g5v"]
+[ext_resource type="PackedScene" uid="uid://ckihlg0mv5m8y" path="res://death_screen.tscn" id="3_v3g5v"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -54,3 +55,6 @@ scale = Vector2(0.39880437, 0.40742108)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_v3g5v")]
 position = Vector2(558, 549)
+
+[node name="DeathScreen" parent="." instance=ExtResource("3_v3g5v")]
+visible = false

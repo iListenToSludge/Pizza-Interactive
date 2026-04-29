@@ -15,10 +15,10 @@ script = ExtResource("1_v6p8y")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 493.0
-offset_top = 277.0
-offset_right = 655.0
-offset_bottom = 324.0
+offset_left = 579.0
+offset_top = 285.0
+offset_right = 741.0
+offset_bottom = 332.0
 theme = SubResource("Theme_ak2if")
 text = "Start"
 
