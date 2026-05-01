@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://xg5rdwgie0jt"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://xg5rdwgie0jt"]
 
+[ext_resource type="Texture2D" uid="uid://bi0xf3dxwxyv5" path="res://assets/curated/bow.png" id="1_plpe6"]
 [ext_resource type="Script" uid="uid://c8h7sowh41qek" path="res://resources/item_resource.gd" id="2_7rdgx"]
 
 [resource]
 script = ExtResource("2_7rdgx")
+item_texture = ExtResource("1_plpe6")
 item_name = "Egg"
 item_slot_type = 4
 metadata/_custom_type_script = "uid://c8h7sowh41qek"

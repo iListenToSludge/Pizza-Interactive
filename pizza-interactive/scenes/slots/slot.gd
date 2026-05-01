@@ -45,7 +45,8 @@ func set_property(data):
 	texture_rect.property = data
 
 	if data["TEXTURE"] == null:
-		filled = false
+		printerr("<Slot>: Texture not defined in item data")
+		#filled = false
 	else:
 		filled = true
  

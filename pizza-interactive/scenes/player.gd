@@ -8,7 +8,7 @@ var can_shoot: bool = false
 var ATK = 0
  
 func _physics_process(_delta):
-	velocity = Input.get_vector("ui_left","ui_right","ui_up","ui_down") * 150
+	velocity = Input.get_vector("move left","move right","move up","move down") * 150
 	move_and_slide()
  
 func _input(event):
