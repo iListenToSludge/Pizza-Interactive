@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ro3vfsskcpmb"]
+[gd_scene load_steps=6 format=3 uid="uid://ro3vfsskcpmb"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1pkq2"]
 [ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_v3g5v"]
+[ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="3_pp8ob"]
+[ext_resource type="Script" uid="uid://baskqj81i3xvo" path="res://scenes/ui.gd" id="3_s0jpr"]
+[ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="4_q1hja"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -49,8 +52,81 @@ color = Color(0.958692, 0.83814794, 0.91022235, 1)
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_1pkq2")]
 position = Vector2(552, 119)
 scale = Vector2(0.39880437, 0.40742108)
+collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_v3g5v")]
 position = Vector2(558, 549)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1160.0
+offset_bottom = 652.0
+script = ExtResource("3_s0jpr")
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 351.00003
+offset_right = -773.68896
+offset_bottom = -216.26056
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.974499, 2.880823)
+columns = 8
+script = ExtResource("3_pp8ob")
+
+[node name="Slot" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot2" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot5" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot6" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot7" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot8" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot9" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot10" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot11" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot12" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot13" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot14" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot15" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
+
+[node name="Slot16" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
+layout_mode = 2
