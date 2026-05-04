@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+signal died
 var speed = 200.0
 var player_chase = false
 var player: Node2D = null
@@ -38,7 +38,7 @@ func attack():
 	$hitbox/attack_timer.start()
 	
 	if player.has_method("take_damage"):
-		player.take_damage(15)
+		player.take_damage(7)
 	# Here is where you would call a function on the player like:
 	# player.take_damage(10)
 
@@ -76,6 +76,7 @@ func take_damage(amount: int, _position = Vector2.ZERO):
 
 func die():
 	print("Enemy died")
+	emit_signal("died")
 	queue_free()
 
 

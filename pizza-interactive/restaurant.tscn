@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ro3vfsskcpmb"]
+[gd_scene load_steps=5 format=3 uid="uid://ro3vfsskcpmb"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1pkq2"]
 [ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_v3g5v"]
 [ext_resource type="PackedScene" uid="uid://ckihlg0mv5m8y" path="res://death_screen.tscn" id="3_v3g5v"]
+[ext_resource type="PackedScene" uid="uid://dkdgkfp2i4od4" path="res://enemy_spawner.tscn" id="4_pp8ob"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -54,7 +55,15 @@ scale = Vector2(0.39880437, 0.40742108)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_v3g5v")]
-position = Vector2(558, 549)
+position = Vector2(-322, 412)
 
 [node name="DeathScreen" parent="." instance=ExtResource("3_v3g5v")]
 visible = false
+
+[node name="EnemySpawner" parent="." instance=ExtResource("4_pp8ob")]
+position = Vector2(480, 520)
+max_active = 1
+
+[node name="EnemySpawner2" parent="." instance=ExtResource("4_pp8ob")]
+position = Vector2(630, 528)
+max_active = 1
