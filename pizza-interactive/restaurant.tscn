@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ro3vfsskcpmb"]
+[gd_scene load_steps=7 format=3 uid="uid://ro3vfsskcpmb"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1pkq2"]
 [ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_v3g5v"]
 [ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="3_pp8ob"]
 [ext_resource type="Script" uid="uid://baskqj81i3xvo" path="res://scenes/ui.gd" id="3_s0jpr"]
 [ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="4_q1hja"]
+[ext_resource type="PackedScene" uid="uid://daaou2niixt8w" path="res://pause_menu.tscn" id="6_fb16x"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -130,3 +131,5 @@ layout_mode = 2
 
 [node name="Slot16" parent="UI/Inventory" instance=ExtResource("4_q1hja")]
 layout_mode = 2
+
+[node name="CanvasLayer" parent="." instance=ExtResource("6_fb16x")]
