@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://b6uls8h22ewfy"]
 
 [ext_resource type="Script" uid="uid://jetqo353d3ju" path="res://scenes/area_2d2.gd" id="1_c4wp1"]
-[ext_resource type="PackedScene" uid="uid://btwlir1t7bme" path="res://character.tscn" id="1_ubp1v"]
-[ext_resource type="Script" uid="uid://c3d7sukmg36xr" path="res://munchkin_player.gd" id="2_fpimf"]
+[ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="2_c4wp1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpimf"]
 size = Vector2(334, 305)
@@ -113,12 +112,10 @@ offset_right = 1046.0
 offset_bottom = -600.0
 color = Color(0.5137255, 0, 0.77254903, 1)
 
-[node name="CharacterBody2D" parent="." unique_id=1046107594 groups=["player"] instance=ExtResource("1_ubp1v")]
-position = Vector2(590, -703)
-script = ExtResource("2_fpimf")
+[node name="CharacterBody2D" parent="." unique_id=41658714 groups=["player"] instance=ExtResource("2_c4wp1")]
+position = Vector2(445, -624)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2074438208]
-zoom = Vector2(0.5, 0.5)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=881480380]
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=709744461]
 position = Vector2(6, 0)
