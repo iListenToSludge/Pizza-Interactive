@@ -1,4 +1,4 @@
-extends "res://scenes/slot.gd"
+extends Slot
 class_name PassiveSlot
 
  

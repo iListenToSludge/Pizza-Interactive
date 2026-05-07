@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EnemyResource" load_steps=2 format=3 uid="uid://b6i863kr4ao1l"]
+
+[ext_resource type="Script" uid="uid://dc38hdthkgxgl" path="res://resources/enemies/enemy_resource.gd" id="1_l6e0v"]
+
+[resource]
+script = ExtResource("1_l6e0v")
+EnemyName = "doodoodada"
+metadata/_custom_type_script = "uid://dc38hdthkgxgl"

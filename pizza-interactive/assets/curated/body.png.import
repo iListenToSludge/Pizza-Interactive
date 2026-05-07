@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://heklj7dfy0ay"
-path="res://.godot/imported/cat character-Recovered-Sheet.png-b56cb5f0879255ede3c53178474641b1.ctex"
+uid="uid://dwg28qbdk8y5y"
+path="res://.godot/imported/body.png-f648ca5cd76dc0c744c272b5cb9e6fe3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assetsitems/cat character-Recovered-Sheet.png"
-dest_files=["res://.godot/imported/cat character-Recovered-Sheet.png-b56cb5f0879255ede3c53178474641b1.ctex"]
+source_file="res://assets/curated/body.png"
+dest_files=["res://.godot/imported/body.png-f648ca5cd76dc0c744c272b5cb9e6fe3.ctex"]
 
 [params]
 

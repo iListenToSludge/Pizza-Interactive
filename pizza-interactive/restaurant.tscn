@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://ro3vfsskcpmb"]
+
+[ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1pkq2"]
+[ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_v3g5v"]
+
+[node name="Resturaunt" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(14, -8.000024)
+scale = Vector2(7.4884224, 1.9627199)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-1.6024737, -9.680431)
+polygon = PackedVector2Array(38.85999, 4.0759764, 39.26061, 367.34735, 16.825975, 364.29037, 16.291817, -4.585474)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-1.6024737, -9.680432)
+polygon = PackedVector2Array(39.26061, 61.649143, 113.375015, 61.649143, 113.375015, 241.5016, 91.608086, 240.99211, 91.608086, 323.02112, 57.421978, 324.0401, 57.421978, 242.0111, 39.26061, 242.0111, 39.527687, 368.87585, 127.66374, 369.89484, 128.06436, 39.74077, 128.1979, -3.056982, 38.59291, -1.528491)
+
+[node name="ColorRect3" type="ColorRect" parent="StaticBody2D/CollisionPolygon2D"]
+visible = false
+modulate = Color(0, 1, 1, 1)
+offset_left = -7.211132
+offset_top = -89.67146
+offset_right = 14.789738
+offset_bottom = 254.18626
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.16967261, 0.6513132, 0.45415032, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 1, 1, 1)
+offset_left = 294.00003
+offset_top = 92.0
+offset_right = 368.22614
+offset_bottom = 284.60382
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.958692, 0.83814794, 0.91022235, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(0, 1, 1, 1)
+offset_left = 432.0
+offset_top = 92.0
+offset_right = 465.92053
+offset_bottom = 372.20053
+scale = Vector2(7.517571, 1.8379694)
+color = Color(0.958692, 0.83814794, 0.91022235, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_1pkq2")]
+position = Vector2(552, 119)
+scale = Vector2(0.39880437, 0.40742108)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_v3g5v")]
+position = Vector2(558, 549)

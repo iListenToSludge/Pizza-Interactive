@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemResourceDatabase" load_steps=8 format=3 uid="uid://b1hpuafrqerfn"]
+
+[ext_resource type="Script" uid="uid://c8h7sowh41qek" path="res://resources/item_resource.gd" id="1_4vshh"]
+[ext_resource type="Resource" uid="uid://y4p11ow8tcye" path="res://resources/item_01.tres" id="2_pmntj"]
+[ext_resource type="Script" uid="uid://c3hp6kqrh0pjv" path="res://resources/item_resource_database.gd" id="2_r5232"]
+[ext_resource type="Resource" uid="uid://df1qwmukx4nuw" path="res://resources/item_00.tres" id="3_ga437"]
+[ext_resource type="Resource" uid="uid://xg5rdwgie0jt" path="res://resources/item_02.tres" id="4_bbde0"]
+[ext_resource type="Resource" uid="uid://c2cf5du7k5pp3" path="res://resources/item_03.tres" id="5_u77r4"]
+[ext_resource type="Resource" uid="uid://s853l67mbf08" path="res://resources/item_04.tres" id="6_kkfgh"]
+
+[resource]
+script = ExtResource("2_r5232")
+item_resource_dictionary = Dictionary[int, ExtResource("1_4vshh")]({
+0: ExtResource("3_ga437"),
+1: ExtResource("2_pmntj"),
+2: ExtResource("4_bbde0"),
+3: ExtResource("5_u77r4"),
+4: ExtResource("6_kkfgh")
+})
+metadata/_custom_type_script = "uid://c3hp6kqrh0pjv"
