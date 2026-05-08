@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://1hlnmtdlwvo3"]
+[gd_scene load_steps=10 format=3 uid="uid://1hlnmtdlwvo3"]
 
 [ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="1_7ddre"]
 [ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="1_g7g4h"]
@@ -8,8 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d3g1pwq28dbbp" path="res://scenes/slots/active_slot.tscn" id="6_h3xc6"]
 [ext_resource type="PackedScene" uid="uid://clb8o8qpxv40h" path="res://player.tscn" id="6_rnaij"]
 [ext_resource type="PackedScene" uid="uid://cm6kcfqiwsvvo" path="res://abstract_item.tscn" id="7_h3xc6"]
-[ext_resource type="PackedScene" uid="uid://d0qca7dk7rtkv" path="res://character.tscn" id="9_h3xc6"]
-[ext_resource type="Texture2D" uid="uid://dxw0cxbtijuo" path="res://scenes/jetpack cat overwatch.webp" id="10_s36qc"]
+[ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="9_h3xc6"]
 
 [node name="TestScene" type="Node2D"]
 position = Vector2(-1, -1)
@@ -44,10 +43,10 @@ HEIGHT"
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 1171.0
-offset_bottom = 665.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1160.0
+offset_bottom = 652.0
 script = ExtResource("1_wtsjf")
 
 [node name="Inventory" type="GridContainer" parent="UI"]
@@ -112,11 +111,6 @@ layout_mode = 2
 
 [node name="Slot16" parent="UI/Inventory" instance=ExtResource("1_g7g4h")]
 layout_mode = 2
-
-[node name="JetpackCatOverwatch" type="Sprite2D" parent="UI/Inventory"]
-position = Vector2(-108.9259, -61.440784)
-scale = Vector2(0.33619106, 0.34712303)
-texture = ExtResource("10_s36qc")
 
 [node name="Character" type="Control" parent="UI"]
 anchors_preset = 0
@@ -189,4 +183,4 @@ position = Vector2(528, 253)
 ID = "4"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("9_h3xc6")]
-position = Vector2(862, 123)
+position = Vector2(758, 94)

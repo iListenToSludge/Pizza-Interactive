@@ -2,14 +2,16 @@
 
 [ext_resource type="Script" uid="uid://c472akyg2katl" path="res://abstract_item.gd" id="1_gt58k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mntrg"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_gt58k"]
+radius = 11.045361
 
 [node name="AbstractItem" type="Sprite2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_gt58k")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_mntrg")
+shape = SubResource("CircleShape2D_gt58k")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

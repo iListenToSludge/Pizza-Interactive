@@ -7,6 +7,11 @@ var can_attack = true
 var player_in_attack_range = false
 @export var health := 100
 @export var max_health := 100
+
+@export var possible_drops: Array[int] = [0, 1, 2, 3, 4]
+@export var drop_scene: PackedScene
+
+
 func _physics_process(delta):
 	# 1. Safety check
 	if player == null or player.player_alive == false:
@@ -74,8 +79,24 @@ func take_damage(amount: int, _position = Vector2.ZERO):
 	if health <= 0:
 		die()
 
+func drop_random_item():
+	if possible_drops.is_empty():
+		return
+
+	var random_index = randi() % possible_drops.size()
+	var item_id = possible_drops[random_index]
+
+	var item = drop_scene.instantiate()
+	item.ID = str(item_id)
+
+	get_parent().add_child(item)
+	item.global_position = global_position
+
 func die():
 	print("Enemy died")
+
+	drop_random_item()
+
 	queue_free()
 
 

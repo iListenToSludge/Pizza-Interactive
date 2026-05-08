@@ -6,5 +6,4 @@
 [resource]
 script = ExtResource("2_cvtae")
 item_texture = ExtResource("1_psrmm")
-item_name = "Egg"
 metadata/_custom_type_script = "uid://c8h7sowh41qek"

@@ -30,8 +30,8 @@ var is_reloading := false
 
 func _ready():
 	$ProgressBar.value = health
-	collision_layer = 2  # This forces the player onto Layer 2 in code
-	print("Player Layer confirmed as: ", collision_layer)
+	#collision_layer = 2  # This forces the player onto Layer 2 in code
+	#print("Player Layer confirmed as: ", collision_layer)
 func take_damage(amount, _source_pos = Vector2.ZERO): 
 	health -= amount
 	health = clamp(health, 0, max_health)

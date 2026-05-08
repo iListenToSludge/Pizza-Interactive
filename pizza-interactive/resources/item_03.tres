@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://c2cf5du7k5pp3"]
 
-[ext_resource type="Texture2D" uid="uid://bi71b6pa4w6m7" path="res://assets/curated/head.png" id="1_lcekp"]
+[ext_resource type="Texture2D" uid="uid://gn4dbup0b6sj" path="res://assets/curated/leg.png" id="1_lcekp"]
 [ext_resource type="Script" uid="uid://c8h7sowh41qek" path="res://resources/item_resource.gd" id="2_ge8ny"]
 
 [resource]

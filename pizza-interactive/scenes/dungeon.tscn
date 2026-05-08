@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b6uls8h22ewfy"]
+[gd_scene load_steps=4 format=3 uid="uid://b6uls8h22ewfy"]
 
 [ext_resource type="Script" uid="uid://jetqo353d3ju" path="res://scenes/area_2d2.gd" id="1_c4wp1"]
 [ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="2_c4wp1"]
@@ -6,10 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpimf"]
 size = Vector2(334, 305)
 
-[node name="Dungeon" type="Node2D" unique_id=1438488270]
+[node name="Dungeon" type="Node2D"]
 position = Vector2(-1, 0)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=572077610]
+[node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -9.0
 offset_top = -7.0
 offset_right = 1131.0
@@ -18,7 +18,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=797539097]
+[node name="ColorRect3" type="ColorRect" parent="."]
 offset_left = 26.0
 offset_top = -993.0
 offset_right = 1166.0
@@ -27,7 +27,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 
-[node name="ColorRect7" type="ColorRect" parent="." unique_id=835414172]
+[node name="ColorRect7" type="ColorRect" parent="."]
 offset_left = -1450.0
 offset_top = -986.0
 offset_right = -310.0
@@ -36,7 +36,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 
-[node name="ColorRect8" type="ColorRect" parent="." unique_id=1062179081]
+[node name="ColorRect8" type="ColorRect" parent="."]
 offset_left = 41.0
 offset_top = -1986.0
 offset_right = 1181.0
@@ -45,7 +45,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 
-[node name="ColorRect9" type="ColorRect" parent="." unique_id=713110884]
+[node name="ColorRect9" type="ColorRect" parent="."]
 offset_left = 1510.0
 offset_top = -965.0
 offset_right = 2650.0
@@ -54,7 +54,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=968745714]
+[node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 414.0
 offset_top = -384.00003
 offset_right = 454.0
@@ -62,7 +62,7 @@ offset_bottom = -356.05884
 scale = Vector2(7.6400013, 13.600002)
 color = Color(0.627451, 0.627451, 0.627451, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=1292754837]
+[node name="ColorRect4" type="ColorRect" parent="."]
 offset_left = 456.0
 offset_top = -1347.0
 offset_right = 496.0
@@ -70,7 +70,7 @@ offset_bottom = -1320.9706
 scale = Vector2(7.6400013, 13.600002)
 color = Color(0.627451, 0.627451, 0.627451, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="." unique_id=1045576711]
+[node name="ColorRect5" type="ColorRect" parent="."]
 offset_left = 1156.0
 offset_top = -513.00006
 offset_right = 1196.0
@@ -79,7 +79,7 @@ rotation = -1.5740876
 scale = Vector2(7.6400013, 13.600002)
 color = Color(0.627451, 0.627451, 0.627451, 1)
 
-[node name="ColorRect6" type="ColorRect" parent="." unique_id=328010661]
+[node name="ColorRect6" type="ColorRect" parent="."]
 offset_left = -310.99997
 offset_top = -507.00003
 offset_right = -270.99997
@@ -88,40 +88,39 @@ rotation = -1.5740876
 scale = Vector2(7.6400013, 13.600002)
 color = Color(0.62763536, 0.62763536, 0.62763536, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=686704414]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=655589142]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-749, -1600)
 scale = Vector2(71.95776, -58.50667)
 polygon = PackedVector2Array(11.034251, 6.4437103, 10.992559, -4.3755703, 16.634758, -4.4268456, 16.81542, -10.221058, 10.950869, -10.443254, 10.825795, -13.4172735, 6.1008015, -13.365997, 6.0174193, -10.699635, -9.700134, -10.49453, -9.741825, 7.691429)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1019651481]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-1526, -159)
 polygon = PackedVector2Array(66, -833, 85, -188, 1207, -188, 1213, -341, 1559, -335, 1562, -191, 1935, -197, 1941, 139, 1523, 148, 1526, 784, -462, 781, -465, -843)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1864082734]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(6, 628, 1137, 631, 1125, -8, 727, -14, 727, -344, 1171, -356, 1168, -506, 1498, -515, 1513, -335, 2654, -332, 2644, 1009, -7, 1000)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=98768956]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(2653, -338, 2653, -950, 1510, -953, 1507, -833, 1176, -833, 1164, -995, 788, -998, 757, -1350, 1179, -1350, 1189, -1992, 54, -1974, 75, -2485, 2977, -2494, 2984, -344)
 
-[node name="ColorRect10" type="ColorRect" parent="." unique_id=608625469]
+[node name="ColorRect10" type="ColorRect" parent="."]
 offset_left = 819.0
 offset_top = -825.0
 offset_right = 1046.0
 offset_bottom = -600.0
 color = Color(0.5137255, 0, 0.77254903, 1)
 
-[node name="CharacterBody2D" parent="." unique_id=41658714 groups=["player"] instance=ExtResource("2_c4wp1")]
-position = Vector2(445, -624)
+[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("2_c4wp1")]
+position = Vector2(432, -613)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=881480380]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=709744461]
-position = Vector2(6, 0)
+[node name="Area2D2" type="Area2D" parent="."]
 script = ExtResource("1_c4wp1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=921953657]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(935, -703)
 shape = SubResource("RectangleShape2D_fpimf")
 
