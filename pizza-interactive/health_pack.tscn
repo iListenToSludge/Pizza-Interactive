@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bni8pbppoua4h"]
+
+[ext_resource type="Script" uid="uid://dsncqro33ijkn" path="res://health_pack.gd" id="1_bboee"]
+[ext_resource type="Texture2D" uid="uid://cexeniqh0w2py" path="res://AO_MN44_24x24_Gray_Polished.jpeg" id="2_v2cuk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irjl4"]
+size = Vector2(114.5, 120.5)
+
+[node name="HealthPack" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_bboee")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.9999981, 4)
+scale = Vector2(0.20789474, 0.2149123)
+texture = ExtResource("2_v2cuk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_irjl4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -80.0
+offset_right = 21.0
+offset_bottom = -57.0
+text = "Press E"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
