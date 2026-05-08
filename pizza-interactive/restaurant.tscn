@@ -63,3 +63,4 @@ max_active = 1
 
 [node name="HealthPack" parent="." instance=ExtResource("4_q1hja")]
 position = Vector2(361, 179)
+heal_amount = 50
