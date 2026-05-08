@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://ccnnkfoiaha65"]
 
-[ext_resource type="PackedScene" uid="uid://btwlir1t7bme" path="res://character.tscn" id="1_4tgn2"]
 [ext_resource type="Script" uid="uid://bkaq8hmwlfb4u" path="res://scenes/resturaunt.gd" id="1_eecnk"]
 [ext_resource type="Script" uid="uid://dty4g6eut2dps" path="res://area_2d.gd" id="2_kdfyq"]
+[ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="4_eecnk"]
 [ext_resource type="PackedScene" uid="uid://daaou2niixt8w" path="res://pause_menu.tscn" id="7_tswjw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shxr0"]
@@ -186,13 +186,8 @@ offset_right = 862.0
 offset_bottom = 557.0
 text = "EXIT"
 
-[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("1_4tgn2")]
-position = Vector2(551, 243)
-scale = Vector2(0.39880437, 0.40742108)
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-2, 1)
 script = ExtResource("2_kdfyq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -200,6 +195,11 @@ position = Vector2(534, -22.75)
 shape = SubResource("RectangleShape2D_0eybj")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_tswjw")]
+
+[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("4_eecnk")]
+position = Vector2(594, 246)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
