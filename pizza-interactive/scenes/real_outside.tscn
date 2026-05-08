@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbi61bvfx1u2y"]
+
+[ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="1_usu8y"]
+[ext_resource type="Texture2D" uid="uid://ctpsldc2d4ug2" path="res://assets/curated/jetpackCat4.jpeg" id="2_tu518"]
+[ext_resource type="Script" uid="uid://bh0c8ygf6drxj" path="res://scenes/outside_to_restaurant.gd" id="3_3xq3q"]
+[ext_resource type="PackedScene" uid="uid://daaou2niixt8w" path="res://pause_menu.tscn" id="4_ihyqb"]
+[ext_resource type="Script" uid="uid://baskqj81i3xvo" path="res://scenes/ui.gd" id="5_v3dx6"]
+[ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="6_orhry"]
+[ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="7_f366j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tu518"]
+size = Vector2(324, 187)
+
+[node name="realOutside" type="Node2D"]
+
+[node name="Munchie" parent="." groups=["player"] instance=ExtResource("1_usu8y")]
+position = Vector2(491, 217)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_tu518")
+
+[node name="outsideTOrestaurant" type="Area2D" parent="."]
+script = ExtResource("3_3xq3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="outsideTOrestaurant"]
+position = Vector2(152, 83.5)
+shape = SubResource("RectangleShape2D_tu518")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 348.0
+offset_top = 28.0
+offset_right = 429.0
+offset_bottom = 58.0
+text = "THIS IS OUTSIDE SCENE"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 184.0
+offset_right = 307.0
+offset_bottom = 229.0
+text = "GO BACK TO RESTAURANT SCENE"
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_ihyqb")]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -441.0
+offset_top = -287.0
+offset_right = 718.0
+offset_bottom = 366.0
+script = ExtResource("5_v3dx6")
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 351.00003
+offset_right = -773.68896
+offset_bottom = -216.26056
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.974499, 2.880823)
+columns = 8
+script = ExtResource("6_orhry")
+
+[node name="Slot" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot2" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot5" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot6" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot7" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot8" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot9" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot10" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot11" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot12" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot13" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot14" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot15" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[node name="Slot16" parent="UI/Inventory" instance=ExtResource("7_f366j")]
+layout_mode = 2
+
+[connection signal="body_entered" from="outsideTOrestaurant" to="outsideTOrestaurant" method="_on_body_entered"]
+[connection signal="body_exited" from="outsideTOrestaurant" to="outsideTOrestaurant" method="_on_body_exited"]

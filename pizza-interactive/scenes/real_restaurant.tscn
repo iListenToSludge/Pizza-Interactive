@@ -1,0 +1,156 @@
+[gd_scene load_steps=12 format=3 uid="uid://dxgbnc34gnvg2"]
+
+[ext_resource type="Script" uid="uid://4r5r1p3rnp65" path="res://scenes/restaurant_to_dungeon.gd" id="1_cqqlb"]
+[ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="2_0f6tv"]
+[ext_resource type="Texture2D" uid="uid://dxw0cxbtijuo" path="res://scenes/jetpack cat overwatch.webp" id="3_0f6tv"]
+[ext_resource type="Script" uid="uid://byvvvacb8vorr" path="res://scenes/restaurant_to_outside.gd" id="4_q3l6w"]
+[ext_resource type="Texture2D" uid="uid://dp6i7drbul16w" path="res://assets/curated/jetpackCat5.jpeg" id="5_i5n8e"]
+[ext_resource type="PackedScene" uid="uid://daaou2niixt8w" path="res://pause_menu.tscn" id="6_i5n8e"]
+[ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="7_8w62w"]
+[ext_resource type="Script" uid="uid://baskqj81i3xvo" path="res://scenes/ui.gd" id="7_cd6pi"]
+[ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="8_cd6pi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4c4u"]
+size = Vector2(87, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ocwk"]
+size = Vector2(72, 57)
+
+[node name="realRestaurant" type="Node2D"]
+
+[node name="restaurantTOdungeon" type="Area2D" parent="."]
+position = Vector2(65, -71)
+script = ExtResource("1_cqqlb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="restaurantTOdungeon"]
+position = Vector2(33.5, 20.5)
+shape = SubResource("RectangleShape2D_e4c4u")
+
+[node name="Munchie" parent="." groups=["player"] instance=ExtResource("2_0f6tv")]
+position = Vector2(143, 51)
+
+[node name="Camera2D" type="Camera2D" parent="Munchie"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 65.0
+offset_top = -78.0
+offset_right = 135.0
+offset_bottom = -22.0
+texture = ExtResource("3_0f6tv")
+expand_mode = 1
+
+[node name="restaurantTOoutside" type="Area2D" parent="."]
+position = Vector2(-21, 69)
+script = ExtResource("4_q3l6w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="restaurantTOoutside"]
+position = Vector2(58, 32)
+shape = SubResource("RectangleShape2D_8ocwk")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 15.0
+offset_top = 78.0
+offset_right = 55.0
+offset_bottom = 118.0
+texture = ExtResource("5_i5n8e")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 185.0
+offset_top = 6.0
+offset_right = 344.0
+offset_bottom = 32.0
+text = "THIS IS RESTAURANT"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -80.0
+offset_top = 48.0
+offset_right = 96.0
+offset_bottom = 81.0
+text = "GO TO OUTSIDE SCENE"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -4.0
+offset_top = -27.0
+offset_right = 143.0
+offset_bottom = -1.0
+text = "GO TO DUNGEON"
+
+[node name="CanvasLayer" parent="." instance=ExtResource("6_i5n8e")]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -441.0
+offset_top = -287.0
+offset_right = 718.0
+offset_bottom = 366.0
+script = ExtResource("7_cd6pi")
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 351.00003
+offset_right = -773.68896
+offset_bottom = -216.26056
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.974499, 2.880823)
+columns = 8
+script = ExtResource("7_8w62w")
+
+[node name="Slot" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot2" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot5" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot6" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot7" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot8" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot9" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot10" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot11" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot12" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot13" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot14" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot15" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[node name="Slot16" parent="UI/Inventory" instance=ExtResource("8_cd6pi")]
+layout_mode = 2
+
+[connection signal="body_entered" from="restaurantTOdungeon" to="restaurantTOdungeon" method="_on_body_entered"]
+[connection signal="body_exited" from="restaurantTOdungeon" to="restaurantTOdungeon" method="_on_body_exited"]
+[connection signal="body_entered" from="restaurantTOoutside" to="restaurantTOoutside" method="_on_body_entered"]
+[connection signal="body_exited" from="restaurantTOoutside" to="restaurantTOoutside" method="_on_body_exited"]
