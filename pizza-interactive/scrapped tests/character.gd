@@ -39,12 +39,27 @@ func take_damage(amount, _source_pos = Vector2.ZERO):
 	
 	if health <= 0:
 		die()
+
+func heal(amount):
+	health += amount
+	health = clamp(health, 0, max_health)
+	$ProgressBar.value = health
+	
+	print("Healed:", amount)
+	print("Current Health:", health)
+
 func die():
 	player_alive = false
 	print("Player has died!")
 	velocity = Vector2.ZERO
 	$CollisionShape2D.set_deferred("disabled", true)
 	self.visible = false
+	get_tree().paused = true
+	get_parent().get_node("DeathScreen").show()
+	
+
+
+
 func _physics_process(delta: float) -> void:
 	if !player_alive:
 		return
