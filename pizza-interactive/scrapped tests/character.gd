@@ -55,9 +55,9 @@ func die():
 	velocity = Vector2.ZERO
 	$CollisionShape2D.set_deferred("disabled", true)
 	self.visible = false
-	get_tree().paused = true
-	get_parent().get_node("DeathScreen").show()
-	
+#get_tree().paused = true
+#get_parent().get_node("DeathScreen").show()
+#ERROR FIX THIS LATER GABE
 
 
 
