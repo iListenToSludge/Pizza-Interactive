@@ -13,7 +13,7 @@ config_version=5
 config/name="Pizza Interactive"
 run/main_scene="uid://b2g3x1c46kbri"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://camkl1pda7ja8"
 
 [autoload]
 

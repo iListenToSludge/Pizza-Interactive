@@ -20,7 +20,7 @@ func process_movement() -> void:
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_vector("left", "right", "up", "down")
+	var direction := Input.get_vector("move left", "move right", "move up", "move down")
 
 	if direction !=  Vector2.ZERO:
 		velocity = direction * SPEED
