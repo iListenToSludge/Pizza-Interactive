@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckihlg0mv5m8y"]
+[gd_scene format=3 uid="uid://ckihlg0mv5m8y"]
 
 [ext_resource type="Script" uid="uid://byacsckr1m1ta" path="res://death_screen.gd" id="1_if853"]
 

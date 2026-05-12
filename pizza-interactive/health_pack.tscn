@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bni8pbppoua4h"]
+[gd_scene format=3 uid="uid://bni8pbppoua4h"]
 
 [ext_resource type="Script" uid="uid://dsncqro33ijkn" path="res://health_pack.gd" id="1_bboee"]
 [ext_resource type="Texture2D" uid="uid://cexeniqh0w2py" path="res://AO_MN44_24x24_Gray_Polished.jpeg" id="2_v2cuk"]

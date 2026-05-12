@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://6ioo34c00kut"]
+[gd_scene format=3 uid="uid://6ioo34c00kut"]
 
 [ext_resource type="Texture2D" uid="uid://dsfwyvsjc14hc" path="res://assets/curated/jetpackCat.jpeg" id="1_qujkq"]
 [ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="2_135ey"]
