@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://ccnnkfoiaha65"]
 
-[ext_resource type="PackedScene" uid="uid://d0qca7dk7rtkv" path="res://character.tscn" id="1_4tgn2"]
-[ext_resource type="Script" uid="uid://bkaq8hmwlfb4u" path="res://scenes/resturaunt.gd" id="1_eecnk"]
+[ext_resource type="PackedScene" path="res://character.tscn" id="1_4tgn2"]
+[ext_resource type="Script" path="res://scenes/resturaunt.gd" id="1_eecnk"]
 [ext_resource type="Script" uid="uid://dty4g6eut2dps" path="res://area_2d.gd" id="2_kdfyq"]
-[ext_resource type="PackedScene" uid="uid://c206wvkbosmc" path="res://pause_menu.tscn" id="7_tswjw"]
+[ext_resource type="PackedScene" path="res://pause_menu.tscn" id="7_tswjw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shxr0"]
 radius = 9.401882

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvdi8qjg07775"]
+[gd_scene load_steps=4 format=3 uid="uid://dvdi8qjg07775"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1hywo"]
+[ext_resource type="PackedScene" uid="uid://b58vk1fl6a31p" path="res://scenes/characters/npc.tscn" id="2_oj4cr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_07sd7"]
 radius = 26.019224
@@ -115,3 +116,6 @@ position = Vector2(584, 560)
 scale = Vector2(0.35880437, 0.36741865)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="npc" parent="." instance=ExtResource("2_oj4cr")]
+position = Vector2(568, 128)

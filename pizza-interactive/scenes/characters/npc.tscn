@@ -85,7 +85,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_bgitj")
 }],
 "loop": true,
-"name": &"back_idle",
+"name": &"npcback_idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -102,7 +102,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_m3kmy")
 }],
 "loop": true,
-"name": &"back_walk",
+"name": &"npcback_walk",
 "speed": 5.0
 }, {
 "frames": [{
@@ -113,7 +113,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_thqvo")
 }],
 "loop": true,
-"name": &"front_idle",
+"name": &"npcfront_idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -130,7 +130,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_37v42")
 }],
 "loop": true,
-"name": &"front_walk",
+"name": &"npcfront_walk",
 "speed": 5.0
 }, {
 "frames": [{
@@ -141,7 +141,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_wwum6")
 }],
 "loop": true,
-"name": &"right_idle",
+"name": &"npcright_idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -158,7 +158,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_b0l76")
 }],
 "loop": true,
-"name": &"right_walk",
+"name": &"npcright_walk",
 "speed": 5.0
 }]
 
@@ -175,7 +175,7 @@ script = ExtResource("1_84hc2")
 modulate = Color(1, 0.48428386, 0.6682198, 1)
 self_modulate = Color(0.9999998, 0.14860845, 0.69433373, 1)
 sprite_frames = SubResource("SpriteFrames_mm6pg")
-animation = &"front_idle"
+animation = &"npcright_walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
@@ -189,3 +189,7 @@ shape = SubResource("CircleShape2D_jucf6")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
