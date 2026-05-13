@@ -126,8 +126,11 @@ script = ExtResource("1_c4wp1")
 position = Vector2(935, -703)
 shape = SubResource("RectangleShape2D_fpimf")
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("3_fpimf")]
+[node name="CharacterBody2D2" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("3_fpimf")]
 position = Vector2(549, -757)
+endPoint = NodePath("Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D2"]
 
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_body_exited"]
