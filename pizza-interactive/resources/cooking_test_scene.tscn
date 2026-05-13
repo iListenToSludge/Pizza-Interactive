@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://digsrn13cd180"]
+
+[ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="1_wrkq4"]
+[ext_resource type="Resource" uid="uid://bl25pi2x7j2wb" path="res://resources/ingredient1.tres" id="2_dwbtt"]
+[ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="2_mlvxf"]
+[ext_resource type="Resource" uid="uid://dq3xnu11bm0a3" path="res://resources/ingredient2.tres" id="3_65a7f"]
+
+[node name="CookingTestScene" type="Node2D"]
+
+[node name="CookingUI" type="CanvasLayer" parent="."]
+
+[node name="Inventory" type="GridContainer" parent="CookingUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 298.0001
+offset_top = 120.0
+offset_right = -676.1548
+offset_bottom = -400.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.974499, 2.880823)
+columns = 4
+script = ExtResource("1_wrkq4")
+ITEM = ExtResource("2_dwbtt")
+ITEM2 = ExtResource("3_65a7f")
+
+[node name="Slot" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot2" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot3" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot4" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot5" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot6" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot7" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot8" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot9" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot10" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot11" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
+
+[node name="Slot12" parent="CookingUI/Inventory" instance=ExtResource("2_mlvxf")]
+layout_mode = 2
