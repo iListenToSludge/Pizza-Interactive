@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6uls8h22ewfy"]
+[gd_scene load_steps=5 format=3 uid="uid://b6uls8h22ewfy"]
 
 [ext_resource type="Script" uid="uid://jetqo353d3ju" path="res://scenes/area_2d2.gd" id="1_c4wp1"]
 [ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="2_c4wp1"]
+[ext_resource type="PackedScene" uid="uid://1p7j05wno43l" path="res://scrapped tests/enemy test blue.tscn" id="3_fpimf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpimf"]
 size = Vector2(334, 305)
@@ -116,6 +117,7 @@ color = Color(0.5137255, 0, 0.77254903, 1)
 position = Vector2(432, -613)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(3, 3)
 
 [node name="Area2D2" type="Area2D" parent="."]
 script = ExtResource("1_c4wp1")
@@ -123,6 +125,9 @@ script = ExtResource("1_c4wp1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(935, -703)
 shape = SubResource("RectangleShape2D_fpimf")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_fpimf")]
+position = Vector2(549, -757)
 
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_body_exited"]
