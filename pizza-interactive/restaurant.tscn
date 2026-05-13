@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ro3vfsskcpmb"]
+[gd_scene load_steps=9 format=3 uid="uid://ro3vfsskcpmb"]
 
 [ext_resource type="PackedScene" uid="uid://ctx1b4dq60qv" path="res://scrapped tests/character.tscn" id="1_1pkq2"]
 [ext_resource type="PackedScene" uid="uid://dspjon02nq16r" path="res://enemy.tscn" id="2_v3g5v"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="4_q1hja"]
 [ext_resource type="PackedScene" uid="uid://daaou2niixt8w" path="res://pause_menu.tscn" id="6_fb16x"]
 [ext_resource type="PackedScene" uid="uid://ckihlg0mv5m8y" path="res://death_screen.tscn" id="7_i0tqs"]
+[ext_resource type="PackedScene" uid="uid://bni8pbppoua4h" path="res://health_pack.tscn" id="8_s0jpr"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -60,14 +61,15 @@ collision_layer = 3
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_v3g5v")]
 position = Vector2(558, 549)
+health_pack_scene = ExtResource("8_s0jpr")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 1160.0
-offset_bottom = 652.0
+offset_left = -2.0
+offset_top = 25.0
+offset_right = 1157.0
+offset_bottom = 678.0
 script = ExtResource("3_s0jpr")
 
 [node name="Inventory" type="GridContainer" parent="UI"]
@@ -137,3 +139,6 @@ layout_mode = 2
 
 [node name="DeathScreen" parent="." instance=ExtResource("7_i0tqs")]
 visible = false
+
+[node name="HealthPack" parent="." instance=ExtResource("8_s0jpr")]
+position = Vector2(356, 153)

@@ -5,13 +5,26 @@ var player_chase = false
 var player: Node2D = null
 var can_attack = true
 var player_in_attack_range = false
+var strafe_direction := 1
+var strafe_timer := 0.0
+var can_dodge := true
+@export var strafe_speed := 120.0
+@export var strafe_change_time := 1.5
+
+@export var dodge_chance := 0.15
+@export var dodge_strength := 250.0
+@export var dodge_cooldown := 1.5
 @export var health := 100
 @export var max_health := 100
+@export var health_pack_scene: PackedScene
+@export var health_pack_drop_chance := 0.50
+
 
 @export var possible_drops: Array[int] = [0, 1, 2, 3, 4]
 @export var drop_scene: PackedScene
 
 func _physics_process(delta):
+
 	# 1. Safety check
 	if player == null or player.player_alive == false:
 		velocity = Vector2.ZERO
@@ -23,19 +36,51 @@ func _physics_process(delta):
 	var direction = (player.global_position - global_position).normalized()
 
 	if player_chase:
-		if distance > 25: # Stay a tiny bit away
+
+		# Chase player if far away
+		if distance > 60:
 			velocity = direction * speed
+
 		else:
-			velocity = Vector2.ZERO # Stop to swing
+			# Strafe around player when close
+
+			strafe_timer -= delta
+
+			if strafe_timer <= 0:
+				strafe_timer = strafe_change_time
+
+				# Randomly choose left or right
+				strafe_direction = [-1, 1].pick_random()
+
+			# Perpendicular direction for strafing
+			var perpendicular = Vector2(
+				-direction.y,
+				direction.x
+			)
+
+			velocity = perpendicular * strafe_direction * strafe_speed
+
 	else:
 		velocity = Vector2.ZERO
 
-	# 3. Handle Attacking (Independent of movement)
+	# 3. Handle Attacking
 	if player_in_attack_range and can_attack:
 		attack()
 
 	# 4. Apply movement
 	move_and_slide()
+
+func dodge(perpendicular):
+	can_dodge = false
+
+	velocity += perpendicular * strafe_direction * dodge_strength
+	if can_dodge and randf() < dodge_chance:
+		dodge(perpendicular)
+	
+	await get_tree().create_timer(dodge_cooldown).timeout
+
+	can_dodge = true
+
 func attack():
 	print("--- ENEMY ATTACKED! ---")
 	can_attack = false
@@ -92,11 +137,27 @@ func drop_random_item():
 	item.global_position = global_position
 	
 
+func drop_health_pack():
+	if health_pack_scene == null:
+		return
+
+	if randf() > health_pack_drop_chance:
+		return
+
+	var health_pack = health_pack_scene.instantiate()
+
+	get_parent().add_child(health_pack)
+
+	health_pack.global_position = global_position + Vector2(
+		randf_range(-50, 50),
+		randf_range(-50, 50)
+	)
 
 func die():
 	print("Enemy died")
 	emit_signal("died")
 	drop_random_item()
+	drop_health_pack()
 	queue_free()
 
 

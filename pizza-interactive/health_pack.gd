@@ -14,8 +14,7 @@ func _ready():
 
 
 func _process(_delta):
-	if player_in_range:
-		print("Player in range")
+	
 
 	if player_in_range and Input.is_action_just_pressed("pickup"):
 		print("Pickup pressed")
@@ -27,10 +26,10 @@ func _process(_delta):
 
 
 func _on_body_entered(body):
-	print("Something entered:", body.name)
+	
 
 	if body.has_method("heal"):
-		print("Player detected")
+		
 
 		player_in_range = true
 		player_reference = body
@@ -38,7 +37,7 @@ func _on_body_entered(body):
 
 
 func _on_body_exited(body):
-	print("Something exited:", body.name)
+	
 
 	if body == player_reference:
 		player_in_range = false
