@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bew882t8t16hq"]
+[gd_scene load_steps=12 format=4 uid="uid://bew882t8t16hq"]
 
 [ext_resource type="Texture2D" uid="uid://pky3vnkp525a" path="res://assets/curated/folliage test.png" id="1_fstom"]
 [ext_resource type="Script" uid="uid://2vl6aop1bbeb" path="res://test_scene_tilemap_with_new_rest_2.gd" id="1_hyprs"]
@@ -650,15 +650,6 @@ sources/0 = SubResource("TileSetAtlasSource_fstom")
 sources/1 = SubResource("TileSetAtlasSource_wcp5j")
 sources/2 = SubResource("TileSetAtlasSource_gseo7")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fstom"]
-size = Vector2(109, 412)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcp5j"]
-size = Vector2(127, 400.75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gseo7"]
-size = Vector2(321, 110)
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hyprs")
 
@@ -688,20 +679,6 @@ script = ExtResource("4_wcp5j")
 gradient = ExtResource("5_gseo7")
 INGAME_SPEED = 40.0
 INITIAL_HOUR = 8
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-205.5, 59)
-shape = SubResource("RectangleShape2D_fstom")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(206, 107.625)
-shape = SubResource("RectangleShape2D_wcp5j")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.5, 259)
-shape = SubResource("RectangleShape2D_gseo7")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_hyprs")]
 
