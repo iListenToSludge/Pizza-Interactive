@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dc8g1xs7msgx1"]
 
-[ext_resource type="Texture2D" uid="uid://5s0xs0nkhkta" path="res://assets/curated/inventorybox1.png" id="1_pmu08"]
+[ext_resource type="Texture2D" uid="uid://bcnkufen7ill7" path="res://assets/curated/inventory box 1.5.png" id="1_pmu08"]
 
 [node name="InventoryGUI" type="Control"]
 layout_mode = 3
