@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwrtv0fl67eob"]
+
+[ext_resource type="Texture2D" uid="uid://mrhd3isgtf4i" path="res://assets/inventory GUI/inventorybuttons.png" id="1_l8lpc"]
+
+[node name="Slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l8lpc")
+centered = false
+vframes = 2
