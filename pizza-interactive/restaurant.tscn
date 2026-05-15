@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dmc53tnqxuvq8" path="res://scenes/slots/slot.tscn" id="4_q1hja"]
 [ext_resource type="PackedScene" uid="uid://daaou2niixt8w" path="res://pause_menu.tscn" id="6_fb16x"]
 [ext_resource type="PackedScene" uid="uid://ckihlg0mv5m8y" path="res://death_screen.tscn" id="7_i0tqs"]
-[ext_resource type="PackedScene" uid="uid://bni8pbppoua4h" path="res://health_pack.tscn" id="8_s0jpr"]
+[ext_resource type="PackedScene" uid="uid://dkdgkfp2i4od4" path="res://enemy_spawner.tscn" id="9_xpvah"]
 
 [node name="Resturaunt" type="Node2D"]
 
@@ -60,8 +60,7 @@ collision_layer = 3
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_v3g5v")]
-position = Vector2(558, 549)
-health_pack_scene = ExtResource("8_s0jpr")
+position = Vector2(-234, 288)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -77,10 +76,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 35.0
-offset_top = 351.00003
-offset_right = -773.68896
-offset_bottom = -216.26056
+offset_left = 40.0
+offset_top = 363.0
+offset_right = -768.68896
+offset_bottom = -204.26059
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.974499, 2.880823)
@@ -140,5 +139,6 @@ layout_mode = 2
 [node name="DeathScreen" parent="." instance=ExtResource("7_i0tqs")]
 visible = false
 
-[node name="HealthPack" parent="." instance=ExtResource("8_s0jpr")]
-position = Vector2(356, 153)
+[node name="EnemySpawner" parent="." instance=ExtResource("9_xpvah")]
+position = Vector2(556, 508)
+max_active = 2

@@ -214,4 +214,6 @@ shape = SubResource("CircleShape2D_pjt0s")
 wait_time = 0.5
 one_shot = true
 
+[node name="HealSound" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="timeout" from="MeleeTimer" to="." method="_on_melee_timer_timeout"]

@@ -4,6 +4,7 @@ var bullet_path=preload("res://bullet2.tscn")
 var last_direction: Vector2 = Vector2.RIGHT
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var heal_sound = $HealSound
 
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true 
@@ -45,6 +46,7 @@ func heal(amount):
 	health += amount
 	health = clamp(health, 0, max_health)
 	$ProgressBar.value = health
+	heal_sound.play()
 	
 	print("Healed:", amount)
 	print("Current Health:", health)

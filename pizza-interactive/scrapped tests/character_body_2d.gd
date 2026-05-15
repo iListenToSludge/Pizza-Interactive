@@ -8,6 +8,7 @@ var player_in_attack_range = false
 var strafe_direction := 1
 var strafe_timer := 0.0
 var can_dodge := true
+
 @export var strafe_speed := 120.0
 @export var strafe_change_time := 1.5
 
@@ -17,7 +18,7 @@ var can_dodge := true
 @export var health := 100
 @export var max_health := 100
 @export var health_pack_scene: PackedScene
-@export var health_pack_drop_chance := 0.50
+@export var health_pack_drop_chance := 1.0
 
 
 @export var possible_drops: Array[int] = [0, 1, 2, 3, 4]

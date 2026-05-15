@@ -4,26 +4,26 @@
 [ext_resource type="Texture2D" uid="uid://cexeniqh0w2py" path="res://AO_MN44_24x24_Gray_Polished.jpeg" id="2_v2cuk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_irjl4"]
-size = Vector2(80.25, 81.25)
+size = Vector2(62.125, 48.625)
 
 [node name="HealthPack" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_bboee")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, -0.9999962)
-scale = Vector2(0.12850878, 0.13552633)
+position = Vector2(0, 1)
+scale = Vector2(0.1116228, 0.07828949)
 texture = ExtResource("2_v2cuk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -2)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_irjl4")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -26.0
-offset_top = -66.0
-offset_right = 29.0
-offset_bottom = -43.0
+offset_left = -25.0
+offset_top = -50.0
+offset_right = 30.0
+offset_bottom = -27.0
 text = "Press E"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

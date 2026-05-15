@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ckihlg0mv5m8y"]
+[gd_scene load_steps=2 format=3 uid="uid://ckihlg0mv5m8y"]
 
 [ext_resource type="Script" uid="uid://byacsckr1m1ta" path="res://death_screen.gd" id="1_if853"]
 
@@ -58,13 +58,13 @@ vertical_alignment = 1
 
 [node name="Menu" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.47000003
+anchor_left = 0.462
 anchor_top = 0.72700006
-anchor_right = 0.523
+anchor_right = 0.531
 anchor_bottom = 0.77500004
-offset_left = 0.5599365
+offset_left = -0.22399902
 offset_top = -0.09603882
-offset_right = -0.49597168
+offset_right = 0.28796387
 offset_bottom = -0.2000122
 text = "Menu"
 
@@ -74,9 +74,9 @@ anchor_left = 0.453
 anchor_top = 0.80100006
 anchor_right = 0.54
 anchor_bottom = 0.84900004
-offset_left = 0.14398193
+offset_left = -6.856018
 offset_top = -0.048034668
-offset_right = -0.08001709
+offset_right = 2.919983
 offset_bottom = -0.15203857
 text = "Quit"
 
