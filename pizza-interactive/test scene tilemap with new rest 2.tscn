@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bew882t8t16hq"]
+[gd_scene load_steps=14 format=4 uid="uid://bew882t8t16hq"]
 
 [ext_resource type="Texture2D" uid="uid://pky3vnkp525a" path="res://assets/curated/folliage test.png" id="1_fstom"]
 [ext_resource type="Script" uid="uid://2vl6aop1bbeb" path="res://test_scene_tilemap_with_new_rest_2.gd" id="1_hyprs"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="4_hyprs"]
 [ext_resource type="Script" uid="uid://cpyed0jrj2j4f" path="res://daynightcycle.gd" id="4_wcp5j"]
 [ext_resource type="Texture2D" uid="uid://b6ehesichu3ep" path="res://assets/curated/daynightcycle-gradient-texture.tres" id="5_gseo7"]
+[ext_resource type="Script" uid="uid://b7jnholfnnake" path="res://testOutsideToInside.gd" id="8_jt77x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fstom"]
 texture = ExtResource("1_fstom")
@@ -650,6 +651,9 @@ sources/0 = SubResource("TileSetAtlasSource_fstom")
 sources/1 = SubResource("TileSetAtlasSource_wcp5j")
 sources/2 = SubResource("TileSetAtlasSource_gseo7")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyprs"]
+size = Vector2(48, 65.40991)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_hyprs")
 
@@ -677,10 +681,20 @@ tile_set = SubResource("TileSet_hyprs")
 color = Color(0.42788917, 0.58165175, 0.8200471, 1)
 script = ExtResource("4_wcp5j")
 gradient = ExtResource("5_gseo7")
-INGAME_SPEED = 40.0
-INITIAL_HOUR = 8
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_hyprs")]
+[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("4_hyprs")]
+position = Vector2(2, 94)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("8_jt77x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -12.030704)
+scale = Vector2(1, 1.0692354)
+shape = SubResource("RectangleShape2D_hyprs")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
