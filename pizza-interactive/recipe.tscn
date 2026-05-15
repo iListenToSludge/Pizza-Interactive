@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf7wucemncnjx"]
+
+[ext_resource type="PackedScene" uid="uid://tdavjm7hll54" path="res://recipe_slot.tscn" id="1_6eiay"]
+[ext_resource type="Script" uid="uid://dtjuepignmx2u" path="res://recipe.gd" id="1_p6tcl"]
+
+[node name="Recipe" type="HBoxContainer"]
+offset_right = 128.0
+offset_bottom = 40.0
+script = ExtResource("1_p6tcl")
+
+[node name="RecipeSlot" parent="." instance=ExtResource("1_6eiay")]
+layout_mode = 2
+
+[node name="RecipeSlot2" parent="." instance=ExtResource("1_6eiay")]
+layout_mode = 2
+
+[node name="Cook" type="Button" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="Cook"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+text = "Cook"
+
+[connection signal="pressed" from="Cook" to="." method="_on_cook_pressed"]

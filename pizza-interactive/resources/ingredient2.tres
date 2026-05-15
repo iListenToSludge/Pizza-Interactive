@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://dq3xnu11bm0a3"]
 
-[ext_resource type="Texture2D" uid="uid://dsfwyvsjc14hc" path="res://assets/curated/jetpackCat.jpeg" id="1_i6vfm"]
+[ext_resource type="Texture2D" uid="uid://cbl1h5jrv32dr" path="res://assets/curated/jetpackCat2.jpeg" id="1_i6vfm"]
 [ext_resource type="Script" uid="uid://c8h7sowh41qek" path="res://resources/item_resource.gd" id="2_i6vfm"]
 [ext_resource type="Resource" uid="uid://bl25pi2x7j2wb" path="res://resources/ingredient1.tres" id="3_v12su"]
 
