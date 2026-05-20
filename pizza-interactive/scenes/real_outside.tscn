@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://dbi61bvfx1u2y"]
+[gd_scene load_steps=9 format=3 uid="uid://dbi61bvfx1u2y"]
 
 [ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="1_usu8y"]
-[ext_resource type="Texture2D" uid="uid://ctpsldc2d4ug2" path="res://assets/curated/jetpackCat4.jpeg" id="2_tu518"]
+[ext_resource type="Texture2D" uid="uid://b8mdpiphg5iqq" path="res://blackScreen.png" id="2_v3dx6"]
 [ext_resource type="Script" uid="uid://bh0c8ygf6drxj" path="res://scenes/outside_to_restaurant.gd" id="3_3xq3q"]
 [ext_resource type="PackedScene" uid="uid://daaou2niixt8w" path="res://pause_menu.tscn" id="4_ihyqb"]
 [ext_resource type="Script" uid="uid://baskqj81i3xvo" path="res://scenes/ui.gd" id="5_v3dx6"]
@@ -12,14 +12,18 @@
 size = Vector2(324, 187)
 
 [node name="realOutside" type="Node2D"]
+position = Vector2(0, 1)
 
 [node name="Munchie" parent="." groups=["player"] instance=ExtResource("1_usu8y")]
 position = Vector2(491, 217)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_tu518")
+offset_left = -17.0
+offset_top = -14.0
+offset_right = 321.0
+offset_bottom = 188.0
+texture = ExtResource("2_v3dx6")
+expand_mode = 1
 
 [node name="outsideTOrestaurant" type="Area2D" parent="."]
 script = ExtResource("3_3xq3q")

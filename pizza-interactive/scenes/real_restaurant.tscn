@@ -1,10 +1,9 @@
-[gd_scene format=3 uid="uid://dxgbnc34gnvg2"]
+[gd_scene load_steps=11 format=3 uid="uid://dxgbnc34gnvg2"]
 
 [ext_resource type="Script" uid="uid://4r5r1p3rnp65" path="res://scenes/restaurant_to_dungeon.gd" id="1_cqqlb"]
 [ext_resource type="PackedScene" uid="uid://burywwc11kw0f" path="res://munchkin_player.tscn" id="2_0f6tv"]
-[ext_resource type="Texture2D" uid="uid://dxw0cxbtijuo" path="res://scenes/jetpack cat overwatch.webp" id="3_0f6tv"]
+[ext_resource type="Texture2D" uid="uid://b8mdpiphg5iqq" path="res://blackScreen.png" id="3_8w62w"]
 [ext_resource type="Script" uid="uid://byvvvacb8vorr" path="res://scenes/restaurant_to_outside.gd" id="4_q3l6w"]
-[ext_resource type="Texture2D" uid="uid://dp6i7drbul16w" path="res://assets/curated/jetpackCat5.jpeg" id="5_i5n8e"]
 [ext_resource type="PackedScene" uid="uid://daaou2niixt8w" path="res://pause_menu.tscn" id="6_i5n8e"]
 [ext_resource type="Script" uid="uid://doublngyuvabf" path="res://scenes/inventory.gd" id="7_8w62w"]
 [ext_resource type="Script" uid="uid://baskqj81i3xvo" path="res://scenes/ui.gd" id="7_cd6pi"]
@@ -32,11 +31,11 @@ position = Vector2(143, 51)
 [node name="Camera2D" type="Camera2D" parent="Munchie"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 65.0
-offset_top = -78.0
-offset_right = 135.0
-offset_bottom = -22.0
-texture = ExtResource("3_0f6tv")
+offset_left = 54.0
+offset_top = -81.0
+offset_right = 142.0
+offset_bottom = -17.0
+texture = ExtResource("3_8w62w")
 expand_mode = 1
 
 [node name="restaurantTOoutside" type="Area2D" parent="."]
@@ -48,11 +47,11 @@ position = Vector2(58, 32)
 shape = SubResource("RectangleShape2D_8ocwk")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-offset_left = 15.0
-offset_top = 78.0
-offset_right = 55.0
-offset_bottom = 118.0
-texture = ExtResource("5_i5n8e")
+offset_left = 3.0
+offset_top = 69.0
+offset_right = 74.0
+offset_bottom = 133.0
+texture = ExtResource("3_8w62w")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
