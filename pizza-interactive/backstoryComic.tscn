@@ -52,7 +52,7 @@ grow_vertical = 2
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -6.0
-offset_top = 506.0
+offset_top = 544.0
 offset_right = 1161.0
 offset_bottom = 659.0
 texture = ExtResource("2_m8xbi")
@@ -60,10 +60,10 @@ expand_mode = 1
 
 [node name="NextButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 993.0
-offset_top = 551.0
-offset_right = 1134.0
-offset_bottom = 617.0
+offset_left = 1000.0
+offset_top = 568.0
+offset_right = 1141.0
+offset_bottom = 634.0
 theme = SubResource("Theme_3lq0g")
 theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_m8xbi")
@@ -73,8 +73,8 @@ text = "Next"
 [node name="ComicText" type="Label" parent="."]
 layout_mode = 0
 offset_left = 16.0
-offset_top = 516.0
-offset_right = 973.0
-offset_bottom = 649.0
+offset_top = 552.0
+offset_right = 792.0
+offset_bottom = 640.0
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
