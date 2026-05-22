@@ -89,11 +89,11 @@ func _physics_process(delta: float) -> void:
 		
 
 	
-	if Input.is_action_just_pressed("shoot"):
-		if current_ammo > 0 and !is_reloading:
-			fire()
-		elif current_ammo <= 0:
-			reload()
+	#if Input.is_action_just_pressed("shoot"):
+		#if current_ammo > 0 and !is_reloading:
+		#	fire()
+		#elif current_ammo <= 0:
+			#reload()
 			
 	if Input.is_action_just_pressed("melee") and can_melee:
 		melee()
@@ -120,15 +120,15 @@ func _on_melee_timer_timeout() -> void:
 	can_melee = true
 
 
-func fire():
-	current_ammo -= 1
-	print("Ammo:", current_ammo)
+#func fire():
+	#current_ammo -= 1
+	#print("Ammo:", current_ammo)
 
-	var bullet = bullet_path.instantiate()
-	bullet.direction = (get_global_mouse_position() - global_position).normalized()
-	bullet.global_position = $BulletSpawn.global_position
-	bullet.rotation = bullet.direction.angle()
-	get_parent().add_child(bullet)
+	#var bullet = bullet_path.instantiate()
+	#bullet.direction = (get_global_mouse_position() - global_position).normalized()
+	#bullet.global_position = $BulletSpawn.global_position
+	#bullet.rotation = bullet.direction.angle()
+	#get_parent().add_child(bullet)
 
 	# Auto reload when empty
 	if current_ammo <= 0:

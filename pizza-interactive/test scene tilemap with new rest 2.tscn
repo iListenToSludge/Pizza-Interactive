@@ -707,6 +707,7 @@ shape = SubResource("RectangleShape2D_hyprs")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+visible = false
 script = ExtResource("9_tgb64")
 
 [node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("9_yoc6w")]
