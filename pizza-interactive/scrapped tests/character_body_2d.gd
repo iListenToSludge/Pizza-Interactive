@@ -132,7 +132,7 @@ func drop_random_item():
 	var item_id = possible_drops[random_index]
 
 	var item = drop_scene.instantiate()
-	item.ID = str(item_id)
+	item.ID = (item_id)
 
 	get_parent().add_child(item)
 	item.global_position = global_position

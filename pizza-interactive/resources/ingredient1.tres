@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bl25pi2x7j2wb"]
+
+[ext_resource type="Texture2D" uid="uid://dxw0cxbtijuo" path="res://scenes/jetpack cat overwatch.webp" id="1_6ae3c"]
+[ext_resource type="Script" uid="uid://c8h7sowh41qek" path="res://resources/item_resource.gd" id="2_0oq26"]
+
+[resource]
+script = ExtResource("2_0oq26")
+item_texture = ExtResource("1_6ae3c")
+item_name = "Jetpack Cat 1"
+description = "Ingredient for cooking"
+metadata/_custom_type_script = "uid://c8h7sowh41qek"

@@ -3,22 +3,27 @@
 [ext_resource type="Script" path="res://title_screen.gd" id="1_v6p8y"]
 
 [sub_resource type="Theme" id="Theme_ak2if"]
+default_font_size = 121
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v6p8y")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 579.0
-offset_top = 285.0
-offset_right = 741.0
-offset_bottom = 332.0
+offset_left = 1286.0
+offset_top = 715.0
+offset_right = 1578.0
+offset_bottom = 889.0
 theme = SubResource("Theme_ak2if")
 text = "Start"
 

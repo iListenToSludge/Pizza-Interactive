@@ -13,3 +13,9 @@ enum ItemSlotType {
 @export var item_name : String = ""
 @export var item_slot_type : ItemSlotType = ItemSlotType.NONE
 @export var item_atk_power : int = 0
+@export var recipe: Array[ItemResource]
+
+@export_enum("Dish", "Material")
+var type = "Material"
+
+@export_multiline var description: String

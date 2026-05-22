@@ -21,3 +21,6 @@ func get_ATK(ID : int = 0):
  
 func get_slot_type(ID : int = 0):
 	return (content[ID] as ItemResource).item_slot_type
+
+func get_item(ID : int = 0) -> ItemResource:
+	return content[ID] as ItemResource

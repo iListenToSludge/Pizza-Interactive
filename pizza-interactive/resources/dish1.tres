@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=5 format=3 uid="uid://bxp7viocf6fyu"]
+
+[ext_resource type="Texture2D" uid="uid://dsfwyvsjc14hc" path="res://assets/curated/jetpackCat.jpeg" id="1_vshl8"]
+[ext_resource type="Script" uid="uid://c8h7sowh41qek" path="res://resources/item_resource.gd" id="2_gf658"]
+[ext_resource type="Resource" uid="uid://bl25pi2x7j2wb" path="res://resources/ingredient1.tres" id="3_x8ii1"]
+[ext_resource type="Resource" uid="uid://dq3xnu11bm0a3" path="res://resources/ingredient2.tres" id="4_el8ju"]
+
+[resource]
+script = ExtResource("2_gf658")
+item_texture = ExtResource("1_vshl8")
+item_name = "Jetpack Cat 3"
+recipe = Array[ExtResource("2_gf658")]([ExtResource("3_x8ii1"), ExtResource("4_el8ju")])
+type = "Dish"
+description = "Dish"
+metadata/_custom_type_script = "uid://c8h7sowh41qek"
